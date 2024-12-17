@@ -1,27 +1,11 @@
-Grove - I2C Thermocouple Amplifier(MCP9600)  [![Build Status](https://travis-ci.com/Seeed-Studio/Seeed_MCP9600.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Seeed_MCP9600)
+Grove Elink 2.7  [![Build Status](https://travis-ci.com/Seeed-Studio/Seeed_Elink_Shield.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Seeed_Elink_Shield)
 ==============
 
-
-Introduction of sensor
-----------------------------  
-Microchip Technology Inc.’s MCP9600 digital temperature sensor converts thermocouple EMF to degree Celsius with inetgrated cold-junction compensation.This device corrects the thermocouplenonlinear error characteristics of eight thermocouple types and outputs ±1.5℃ accurate temperature data for the selected thermocouple. 
+Visit Seeed official product wiki to get more detail.
 
 ***
-Usage:
-==========
-Download all the source files.
-There are two examples for user to use.
->* **example/MCP9600_basic_demo/MCP9600_basic_demo.ino**:This example is a sample use of temperature sensor,you need to polling for data. 
->* **example/MCP9600_4channel_INT_demo/MCP9600_4channel_INT_demo.ino**,There are four alert pads on the sensor module which connect to alert pin.You can set temperature limits by calling the API we provided.The alert pin outputs low when the temperature value beyond limit.You can attach alert pin to a interrupt pin of host,To improve the efficiency of program operation.
-
-Reference:
-===============
-Refer to the **datasheet** to get more detail.
-
-
-
-***
-This software is written by downey  for seeed studio<br>
+This software is written by downey for seeed studio<br>
+It's based on wavehare library.
 Email:dao.huang@seeed.cc
 and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt for more information.<br>
 
