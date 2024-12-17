@@ -34,58 +34,10 @@ jobs:
       - name: Setup arduino cli
         uses: arduino/setup-arduino-cli@v2.0.0
 
-      # - name: Create a depend.list file
-      #   run: |
-      #     # eg: echo "<repo>" >> depend.list
-      #     echo "Seeed-Studio/Seeed_Arduino_ADXL345" >> depend.list
-      #     echo "Seeed-Studio/Grove_Current_Sensor" >> depend.list
-
-      # - name: Create a ignore.list file
-      #   run: |
-      #     # eg: echo "<path>,<fqbn>" >> ignore.list
-      #     echo "All_Terminal_player,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list
-      #     echo "Grove_2_5A_Current_Sensor,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list
-      #     echo "Grove_5A_AC_Current_Sensor,esp32:esp32:XIAO_ESP32C3" >> ignore.list
-      #     echo "Grove_5A_DC_Current_Sensor_OLED,esp32:esp32:XIAO_ESP32C6" >> ignore.list
-      #     echo "Grove_10A_Current_Sensor,esp32:esp32:XIAO_ESP32S3" >> ignore.list
-      #     echo "Grove_5A_DC_Current_Sensor_OLED,esp32:esp32:XIAO_ESP32C6" >> ignore.list
-      #     echo "Grove_10A_Current_Sensor,esp32:esp32:XIAO_ESP32S3" >> ignore.list
-
-      #     echo "Grove_2_5A_Current_Sensor,Seeeduino:nrf52:xiaonRF52840" >> ignore.list
-      #     echo "Grove_2_5A_Current_Sensor,Seeeduino:nrf52:xiaonRF52840Sense" >> ignore.list
-      #     echo "Grove_2_5A_Current_Sensor,esp32:esp32:XIAO_ESP32C3" >> ignore.list
-      #     echo "Grove_2_5A_Current_Sensor,esp32:esp32:XIAO_ESP32C6" >> ignore.list
-      #     echo "Grove_2_5A_Current_Sensor,esp32:esp32:XIAO_ESP32S3" >> ignore.list
-
-      #     echo "Grove_5A_AC_Current_Sensor,Seeeduino:nrf52:xiaonRF52840" >> ignore.list
-      #     echo "Grove_5A_AC_Current_Sensor,Seeeduino:nrf52:xiaonRF52840Sense" >> ignore.list
-      #     echo "Grove_5A_AC_Current_Sensor,esp32:esp32:XIAO_ESP32C3" >> ignore.list
-      #     echo "Grove_5A_AC_Current_Sensor,esp32:esp32:XIAO_ESP32C6" >> ignore.list
-      #     echo "Grove_5A_AC_Current_Sensor,esp32:esp32:XIAO_ESP32S3" >> ignore.list
-
-      #     echo "Grove_5A_DC_Current_Sensor_OLED,Seeeduino:nrf52:xiaonRF52840" >> ignore.list
-      #     echo "Grove_5A_DC_Current_Sensor_OLED,Seeeduino:nrf52:xiaonRF52840Sense" >> ignore.list
-      #     echo "Grove_5A_DC_Current_Sensor_OLED,esp32:esp32:XIAO_ESP32C3" >> ignore.list
-      #     echo "Grove_5A_DC_Current_Sensor_OLED,esp32:esp32:XIAO_ESP32C6" >> ignore.list
-      #     echo "Grove_5A_DC_Current_Sensor_OLED,esp32:esp32:XIAO_ESP32S3" >> ignore.list
-
-      #     echo "Grove_10A_Current_Sensor_OLED,Seeeduino:nrf52:xiaonRF52840" >> ignore.list
-      #     echo "Grove_10A_Current_Sensor_OLED,Seeeduino:nrf52:xiaonRF52840Sense" >> ignore.list
-      #     echo "Grove_10A_Current_Sensor_OLED,esp32:esp32:XIAO_ESP32C3" >> ignore.list
-      #     echo "Grove_10A_Current_Sensor_OLED,esp32:esp32:XIAO_ESP32C6" >> ignore.list
-      #     echo "Grove_10A_Current_Sensor_OLED,esp32:esp32:XIAO_ESP32S3" >> ignore.list
-
-      #     echo "Grove_2_5A_Current_Sensor_OLED,Seeeduino:nrf52:xiaonRF52840" >> ignore.list
-      #     echo "Grove_2_5A_Current_Sensor_OLED,Seeeduino:nrf52:xiaonRF52840Sense" >> ignore.list
-      #     echo "Grove_2_5A_Current_Sensor_OLED,esp32:esp32:XIAO_ESP32C3" >> ignore.list
-      #     echo "Grove_2_5A_Current_Sensor_OLED,esp32:esp32:XIAO_ESP32C6" >> ignore.list
-      #     echo "Grove_2_5A_Current_Sensor_OLED,esp32:esp32:XIAO_ESP32S3" >> ignore.list
-
-      #     echo "Grove_5A_DC_Current_Sensor,Seeeduino:nrf52:xiaonRF52840" >> ignore.list
-      #     echo "Grove_5A_DC_Current_Sensor,Seeeduino:nrf52:xiaonRF52840Sense" >> ignore.list
-      #     echo "Grove_5A_DC_Current_Sensor,esp32:esp32:XIAO_ESP32C3" >> ignore.list
-      #     echo "Grove_5A_DC_Current_Sensor,esp32:esp32:XIAO_ESP32C6" >> ignore.list
-      #     echo "Grove_5A_DC_Current_Sensor,esp32:esp32:XIAO_ESP32S3" >> ignore.list
+      - name: Create a ignore.list file
+        run: |
+          # eg: echo "<path>,<fqbn>" >> ignore.list
+          echo "basic_demo,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list
 
       - name: Build sketch
         run: ./ci/tools/compile.sh
