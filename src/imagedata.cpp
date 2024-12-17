@@ -52,7 +52,11 @@
 */
 
 #include "imagedata.h"
+#ifdef ARDUINO_ARCH_ESP32
+#include <pgmspace.h>
+#else
 #include <avr/pgmspace.h>
+#endif
 
 const unsigned char IMAGE_BLACK[5808] PROGMEM = { /* 0X01,0X01,0X08,0X01,0XB0,0X00, */
     0X00, 0X00, 0X00, 0X00, 0X00, 0X00, 0X00, 0X00, 0X00, 0X00, 0X00, 0X00, 0X00, 0X00, 0X00, 0X00,
