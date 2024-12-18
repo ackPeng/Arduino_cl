@@ -5,11 +5,14 @@
 
 #include "Arduino.h"
 
-#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
-#define PN532_DEBUG_SERIAL SerialUSB
+#ifdef SEEED_XIAO_M0
+    #define PN532_DEBUG_SERIAL Serial
+#elif defined(ARDUINO_SAMD_VARIANT_COMPLIANCE)
+    #define PN532_DEBUG_SERIAL SerialUSB
 #else
-#define PN532_DEBUG_SERIAL Serial
+    #define PN532_DEBUG_SERIAL Serial
 #endif
+
 
 #ifdef DEBUG
 #define DMSG(args...) PN532_DEBUG_SERIAL.print(args)
