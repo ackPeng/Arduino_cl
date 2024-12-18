@@ -1,38 +1,58 @@
-# Seeed TMG3993 Library  [![Build Status](https://travis-ci.com/Seeed-Studio/Seeed_TMG3993.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Seeed_TMG3993)
+Grove temperature sensor MAX31850K  [![Build Status](https://travis-ci.com/Seeed-Studio/Seeed_MAX31850K.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Seeed_MAX31850K)
+=============================================================  
 
-This is the Arduino library for Seeed's TMG3993 based products. For now, it's Grove - Light&Gesture&Color&Proximity Sensor.
+![MAX31850](https://github.com/linux-downey/Grove_Temperature_sensor_MAX31850K/blob/master/MAX31850K_module.png)  
 
-TODO: fix this image when the product is launched.
+Introduction of sensor
+----------------------------  
+The MAX31850/MAX31851 cold-junction compensated, 1-WireM thermocouple-to-digital converters perform
+cold-junction compensation and digitize the signal from
+a K-, J-, N-, T-, S-, R-, or E-type thermocouple. The converters resolve temperatures to 0.25NC, allow readings
+as high as +1768NC and as low as -270NC, and exhibit
+thermocouple accuracy of 8 LSBs (2NC) for temperatures
+ranging from -200NC to +700NC. 
 
-[![product_image](url)](http://www.seeedstudio.com)
+***
+Before using:
+==============
+The communication of module is base on one-wire,Sopports two use modes:  
+>* single mode(one host and one slave)  
+>* multiple mode(one host and multiple slaves,base on rom addressing-one wire search algorithm.This is more complex and subtle than IIC addressing.).**In multiple mode ,you can change the address of the module by changing the Pad connection method on the back of board,default is all to low.**
+
+Usage:
+==========  
+Download all the source files.
+Attach the type K Thermocouple to the module port.
+Note that the **one-wire pin is D3**.
+There are two examples for user to use.
+>* **example/Single/Single.ino**,single mode.  
+>* **example/Multiple/Multiple.ino**,multiple mode,Use this demo when two or more modules attach to host arduino board.It also can be used in the situation that only attach one module.But we don't recommend such operation,Cause it will reduce the operating efficiency of the program.  
+
+Extended:
+------------
+[One-wire search algorithm](https://www.maximintegrated.com/cn/app-notes/index.mvp/id/187) for chinese.  
+
+[One-wire search algorithm](http://www.sal.wisc.edu/PFIS/docs/rss-nir/archive/public/Product%20Manuals/maxim-ic/AN187.pdf) for english.
+
+Read the source code and refer to manual Simultaneously.This algorithm is worth a look if you are a software lovers.
+***
+
+Reference:
+===============
+Refer to the **/doc** to get more detail.
+
+***
+
+declaration:
+=====
+This most part of arduino library is based on [Dallas temperature library](https://github.com/tomdeboer/SparkCoreDallasTemperature).
 
 
-## Usage Tips
 
-The gesture functionality is not supported yet, since this functionality needs algorithms provided by AMS. We will update this library as soon as we get the support from AMS.
-
-
-## Examples
-
-### Example1
-
-This example reads the raw (uint16_t) data of the proximity sensor.
-
-### Example2
-
-This example is also used to detect proximity, but in interrupt way. Two thresholds need to be configured - low and high. Any proximity value which is inside this range will trigger nothing, but the value outside this range will trigger events. In detail, when the proximity sensor values are below the `low` threshold over 10 times, a `proximity removed` event will be emitted, when the proximity sensor values are higher than the `high` threshold over 10 times, a `proximity detected` event will be emitted. The `10 times` here can be configured via `setInterruptPersistenceReg` (see `setupRecommendedConfigForProximity` for an example).
-
-### Example3
-
-This example reads the R, G, B, C sensor values. `C` is defined as `the non-color filtered clear channel` in the chip's datasheet. This examples also calculates Lux value for the ambient light based on the equation in the `Application Note` of this sensor.
-
-TODO: fix this url when the wiki is available.
-
-For more information, please refer to [wiki page](<wiki url>).
-
-----
-
-This software is written by Jack Shao for seeed studio and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt for more information.<br>
+***
+This software is written by downey  for seeed studio<br>
+Email:dao.huang@seeed.cc
+and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt for more information.<br>
 
 Contributing to this software is warmly welcomed. You can do this basically by<br>
 [forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
@@ -43,13 +63,3 @@ Seeed Studio is an open hardware facilitation company based in Shenzhen, China. 
 Benefiting from local manufacture power and convenient global logistic system, <br>
 we integrate resources to serve new era of innovation. Seeed also works with <br>
 global distributors and partners to push open hardware movement.<br>
-
-
-[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/grove-light-gesture-color-proximity-sensor)](https://github.com/igrigorik/ga-beacon)
-
-
-
-
-
-
-
