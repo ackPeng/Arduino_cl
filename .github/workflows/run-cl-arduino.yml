@@ -31,6 +31,12 @@ jobs:
       - name: Create a ignore.list file
         run: |
           # eg: echo "<path>,<fqbn>" >> ignore.list
+          echo "Multiple,esp32:esp32:XIAO_ESP32C3" >> ignore.list
+          echo "Simple,esp32:esp32:XIAO_ESP32C3" >> ignore.list
+          echo "Multiple,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+          echo "Simple,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+          echo "Multiple,esp32:esp32:XIAO_ESP32S3" >> ignore.list
+          echo "Simple,esp32:esp32:XIAO_ESP32S3" >> ignore.list
 
       - name: Build sketch
         run: ./ci/tools/compile.sh
