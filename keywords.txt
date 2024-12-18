@@ -1,24 +1,17 @@
 #######################################
-# Syntax Coloring Map For Grove -alphanumeric display
+# Syntax Coloring Map 
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
-Seeed_Digital_Tube  KEYWORD1
+
+TMG3993 KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-init	KEYWORD2
-setTubeType	KEYWORD2
-setBlinkRate	KEYWORD2
-setBrightness	KEYWORD2
-displayString   KEYWORD2
-displayNum    KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
-
-

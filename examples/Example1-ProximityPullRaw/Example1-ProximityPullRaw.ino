@@ -1,11 +1,9 @@
 /*
-    number_increment.ino
-    Driver for digital tube.
+    An example for Grove - Light&Gesture&Color&Proximity Sensor
 
-    Copyright (c) 2018 Seeed Technology Co., Ltd.
-    Website    : www.seeed.cc
-    Author     : downey
-    Create Time: sep. 2018
+    Copyright (c) 2018 seeed technology co., ltd.
+    Author      : Jack Shao
+    Create Time: June 2018
     Change Log :
 
     The MIT License (MIT)
@@ -28,51 +26,32 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
 */
+
 #include <Wire.h>
-#include "grove_alphanumeric_display.h"
 
+#include "Seeed_TMG3993.h"
 
-Seeed_Digital_Tube tube;
-
-char hex_str[10];
+TMG3993 tmg3993;
 
 void setup() {
+    Serial.begin(9600);
+    Serial.println("TMG3993 Proximity Example");
+
     Wire.begin();
 
-    // If using two digital tubes, use this configuration.
-    // tube.setTubeType(TYPE_2,TYPE_2_DEFAULT_I2C_ADDR);
-
-    // If using four digital tubes, use this configuration.
-    tube.setTubeType(TYPE_4, TYPE_4_DEFAULT_I2C_ADDR);
-
-    tube.setBrightness(15);
-    tube.setBlinkRate(BLINK_OFF);
-
-}
-
-char* numToHexString(unsigned int num) {
-    if (num <= 0xf) {
-        sprintf(hex_str, "0%x", num);
-        for (int i = 0; i < 2; i++) {
-            if (hex_str[i] >= 'a' && hex_str[i] <= 'z') {
-                hex_str[i] -= 0x20;
-            }
-        }
-        return hex_str;
+    if (tmg3993.initialize() == false) {
+        Serial.println("Device not found. Check wiring.");
+        while (1);
     }
-    sprintf(hex_str, "%x", num);
-    for (int i = 0; i < 2; i++) {
-        if (hex_str[i] >= 'a' && hex_str[i] <= 'z') {
-            hex_str[i] -= 0x20;
-        }
-    }
-    return hex_str;
+    tmg3993.setupRecommendedConfigForProximity();
+    tmg3993.enableEngines(ENABLE_PON | ENABLE_PEN | ENABLE_PIEN);
 }
-
 
 void loop() {
-    for (int i = 0; i < 0xff; i++) {
-        tube.displayString(numToHexString(i), 0);
-        delay(100);
+    if (tmg3993.getSTATUS() & STATUS_PVALID) {
+        uint8_t proximity_raw = tmg3993.getProximityRaw();  //read the Proximity data will clear the status bit
+        Serial.print("Proximity Raw: ");
+        Serial.println(proximity_raw);
     }
+    delay(1);
 }
