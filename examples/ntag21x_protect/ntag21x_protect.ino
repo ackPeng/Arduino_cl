@@ -9,6 +9,7 @@
 #define NFC_INTERFACE_SPI
 #include <SPI.h>
 #include <PN532_SPI.h>
+#include <PN532_SPI.cpp>
 
 
 PN532_SPI intf(SPI, 10);
@@ -17,6 +18,7 @@ PN532 nfc = PN532(intf);
 #define NFC_INTERFACE_I2C
 #include <Wire.h>
 #include <PN532_I2C.h>
+#include <PN532_I2C.cpp>
 
 PN532_I2C intf(Wire);
 PN532 nfc = PN532(intf);

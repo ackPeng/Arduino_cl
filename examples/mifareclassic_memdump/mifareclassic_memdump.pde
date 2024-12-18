@@ -13,6 +13,7 @@
   #define NFC_INTERFACE_SPI
   #include <SPI.h>
   #include <PN532_SPI.h>
+  #include <PN532_SPI.cpp>
   #include "PN532.h"
 
   PN532_SPI pn532spi(SPI, 10);
@@ -28,6 +29,7 @@
   #define NFC_INTERFACE_I2C
   #include <Wire.h>
   #include <PN532_I2C.h>
+  #include <PN532_I2C.cpp>
   #include <PN532.h>
 
   PN532_I2C pn532i2c(Wire);

@@ -29,15 +29,9 @@ jobs:
           # eg: echo "<repo>" >> depend.list
           echo "TheNitek/NDEF" >> depend.list
 
-      # - name: Create a ignore.list file
-      #   run: |
-      #     # eg: echo "<path>,<fqbn>" >> ignore.list
-      #     echo "MCP9600_4channel_INT_demo,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list
-      #     echo "MCP9600_basic_demo,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list
-      #     echo "MCP9600_4channel_INT_demo,Seeeduino:nrf52:xiaonRF52840" >> ignore.list
-      #     echo "MCP9600_basic_demo,Seeeduino:nrf52:xiaonRF52840" >> ignore.list
-      #     echo "MCP9600_4channel_INT_demo,Seeeduino:nrf52:xiaonRF52840Sense" >> ignore.list
-      #     echo "MCP9600_basic_demo,Seeeduino:nrf52:xiaonRF52840Sense" >> ignore.list
+      - name: Create a ignore.list file
+        run: |
+          # eg: echo "<path>,<fqbn>" >> ignore.list
 
       - name: Build sketch
         run: ./ci/tools/compile.sh
