@@ -1,145 +1,58 @@
-# NFC library
+## NFC_Tag_M24LR6E  [![Build Status](https://travis-ci.com/Seeed-Studio/NFC_Tag_M24LR6E.svg?branch=master)](https://travis-ci.com/Seeed-Studio/NFC_Tag_M24LR6E)
 
-This is an library for PN532 to use NFC technology.
-It is for [NFC Shield](https://www.seeedstudio.com/NFC-Shield-V2-0.html) and [Grove - NFC](https://www.seeedstudio.com/Grove-NFC.html).
+![](https://statics3.seeedstudio.com/images/product/grove%20nfc%20tag.jpg)
 
-[![NFC Shield](https://statics3.seeedstudio.com/images/113030001%201.jpg)](https://www.seeedstudio.com/NFC-Shield-V2-0.html)
-[![Grove - NFC](https://statics3.seeedstudio.com/images/product/grove%20nfc.jpg)](https://www.seeedstudio.com/Grove-NFC.html)
+[Grove - NFC Tag](https://www.seeedstudio.com/s/Grove-NFC-Tag-p-1866.html)
 
-## Features
+Grove - NFC Tag is a highly integrated Near Field Communication Tag module,this module is I2C interface,which base on M24LR64E-R,M24LR64E-R have a 64-bit unique identifier and 64 -Kbit EEPROM.Grove - NFC Tag attach an independent PCB antenna which can easily stretch out of any enclosure you use, leaving more room for you to design the exterior of your project.
 
-- Support all interfaces of PN532 (I2C, SPI, HSU)
-- Read/write Mifare Classic Card
-- Works with [Don's NDEF Library](https://github.com/don/NDEF)
-- Communicate with android 4.0+([Lists of devices supported](https://github.com/Seeed-Studio/PN532/wiki/List-of-devices-supported))
-- Support [mbed platform](https://os.mbed.com/teams/Seeed/code/PN532/)
-- Card emulation (NFC Type 4 tag)
+### Features
 
-## To Do
+##### *I2C interface* #####
++ Two-wire I2C Serial interface supports 400KHZ protocol
++ Single supply voltage: 1.8V ~ 5.5V
++ Byte and Page Write(up to 4 bytes)
++ Random and Sequential read modes
++ Self-timed programming cycle
++ Automatic address incrementing
 
-- To support more than one INFO PDU of P2P communication
-- To read/write NFC Type 4 tag
+##### *Contactless interface* #####
++ ISO 15693 and ISO 18000-3 mode 1 compatible
++ 13.56 MHz ± 7 kHz carrier frequency
++ To tag: 10% or 100% ASK modulation using 1/4 (26Kbit/s) or 1/256 (1.6 Kbit/s) pulse position coding
++ From tag: load modulation using Manchester coding with 423 kHz and 484 kHz subcarriers in low (6.6 kbit/s) or high (26 kbit/s) data rate mode. Supports the 53 kbit/s data rate with Fast commands
++ Internal tuning capacitance: 27.5 pF
++ 64-bit unique identifier (UID)
++ Read Block & Write (32-bit blocks)
 
-## Getting Started
+##### *Memory* #####
++ 64-Kbit EEPROM organized into:
+ 1. 8192 bytes in I2C mode
+ 2. 2048 blocks of 32 bits in RF mode 
++ Write time
+ 1. I2C: 5ms(max)
+ 2. RF: 5.75 ms including the internal Verify time
++ More than 1 million write cycles
++ More than 40-year data retention
++ Multiple password protection in RF mode
++ Single password protection in I2C mode
 
-### Using Arduino IDE
 
-1. Download [zip file](https://github.com/Seeed-Studio/PN532/archive/refs/heads/arduino.zip)， extract it into Arduino's libraries and rename it to PN532-Arduino.
-2. Download [Don's NDEF library](https://github.com/don/NDEF/archive/refs/heads/master.zip)， extract it into Arduino's libraries and rename it to NDEF.
-3. Add the `NFC_INTERFACE_<interface>` build flag to your build system or define it in your code using `#define NFC_INTERFACE_<interface>` like
+### Getting Started
+please follow the example sketch( **LedControl** ) and you can find some userful things in resources directory. Have fun!
 
-   ```cpp
-   #define NFC_INTERFACE_I2C
-   ```
+For more information please visit [wiki](http://wiki.seeedstudio.com/Grove_NFC_Tag/).
 
-4. Follow the examples of the two libraries.
 
-### PlatformIO library
+----
 
-Add `https://github.com/Seeed-Studio/PN532.git` to your `lib_deps` variable in `platformio.ini` like so. This library will automatically include Don's NDEF library as well.
+This software is written by lawliet zou (![](http://www.seeedstudio.com/wiki/images/f/f8/Email-lawliet.zou.jpg)) for [Seeed Technology Inc.](http://www.seeed.cc) and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt/LICENSE for the details of MIT license.<br>
 
-```
-lib_deps =
-    https://github.com/Seeed-Studio/PN532.git
-```
+Contributing to this software is warmly welcomed. You can do this basically by<br>
+[forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
+for operating guide). Adding change log and your contact into file header is encouraged.<br>
+Thanks for your contribution.
 
-> ⚠️ Besides using the correct `PN532_<interface>.h` include file, you have to add `-DNFC_INTERFACE_<interface>` to `build_flags` to select what interface you want to use. This is done to prevent requiring unnecessary dependencies on e.g. `SoftwareSerial` or `SPI` when you are not using those interfaces.
+Seeed is a hardware innovation platform for makers to grow inspirations into differentiating products. By working closely with technology providers of all scale, Seeed provides accessible technologies with quality, speed and supply chain knowledge. When prototypes are ready to iterate, Seeed helps productize 1 to 1,000 pcs using in-house engineering, supply chain management and agile manufacture forces. Seeed also team up with incubators, Chinese tech ecosystem, investors and distribution channels to portal Maker startups beyond.
 
-```
-build_flags =
-    -DNFC_INTERFACE_HSU
-```
-
-### Git way for Linux/Mac (recommended)
-
-1.  Get PN532 library and NDEF library
-
-        cd {Arduino}\libraries
-        git clone --recursive https://github.com/Seeed-Studio/PN532.git NFC
-        git clone --recursive https://github.com/don/NDEF.git NDEF
-        ln -s NFC/PN532 ./
-        ln -s NDEF/NDEF ./
-
-1.  Add the `NFC_INTERFACE_<interface>` build flag to your build system or define it in your code using `#define NFC_INTERFACE_<interface>` like
-
-    ```cpp
-    #define NFC_INTERFACE_I2C
-    ```
-
-1.  Follow the examples of the two libraries
-
-## Interfaces
-
-This library offers four ways to interface with the PN532 board:
-
-- `HSU` (High Speed Uart)
-- `I2C`
-- `SPI`
-- `SWHSU` (Software-based High Speed Uart)
-
-Read the section for the interface you want to use.
-
-> Make sure to add the `PN532_<interface>.h` include file and the `NFC_INTERFACE_<interface>` define to your code like the example below:
-
-```cpp
-#define NFC_INTERFACE_HSU
-
-#include <PN532_HSU.h>
-#include <PN532.h>
-```
-
-## HSU Interface
-
-HSU is short for High Speed Uart. HSU interface needs only 4 wires to connect PN532 with Arduino, [Sensor Shield](http://goo.gl/i0EQgd) can make it more easier. For some Arduino boards like [Leonardo][leonardo], [DUE][due], [Mega][mega] ect, there are more than one `Serial` on these boards, so we can use this additional Serial to control PN532, HSU uses 115200 baud rate.
-
-To use the `Serial1` control PN532, refer to the code below.
-
-```c++
-#define NFC_INTERFACE_HSU
-
-#include <PN532_HSU.h>
-#include <PN532.h>
-
-PN532_HSU pn532hsu(Serial1);
-PN532 nfc(pn532hsu);
-
-void setup(void)
-{
-	nfc.begin();
-	//...
-}
-```
-
-If your Arduino has only one serial interface and you want to keep it for control or debugging with the Serial Monitor, you can use the [`SoftwareSerial`][softwareserial] library to control the PN532 by emulating a serial interface. Include `PN532_SWHSU.h` instead of `PN532_HSU.h`:
-
-```c++
-#define NFC_INTERFACE_SWHSU
-
-#include <SoftwareSerial.h>
-#include <PN532_SWHSU.h>
-#include <PN532.h>
-
-SoftwareSerial SWSerial( 10, 11 ); // RX, TX
-
-PN532_SWHSU pn532swhsu( SWSerial );
-PN532 nfc( pn532swhsu );
-
-void setup(void)
-{
-	nfc.begin();
-	//...
-}
-```
-
-## Attribution
-
-This library is based on [Adafruit_NFCShield_I2C](https://github.com/adafruit/Adafruit_NFCShield_I2C).
-[Seeed Studio](hhttps://www.seeedstudio.com/) rewrite the library to make it easy to support different interfaces and platforms.
-[@Don](https://github.com/don) writes the [NDEF library](https://github.com/don/NDEF) to make it more easy to use.
-[@JiapengLi](https://github.com/JiapengLi) adds HSU interface.
-[@awieser](https://github.com/awieser) adds card emulation function.
-
-[mega]: http://arduino.cc/en/Main/arduinoBoardMega
-[due]: http://arduino.cc/en/Main/arduinoBoardDue
-[leonardo]: http://arduino.cc/en/Main/arduinoBoardLeonardo
-[softwareserial]: https://www.arduino.cc/en/Reference/softwareSerial
+[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/NFC_Tag_M24LR6E)](https://github.com/igrigorik/ga-beacon)
