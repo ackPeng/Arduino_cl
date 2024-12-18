@@ -39,10 +39,13 @@
     #define SCLPIN  A5
 #endif
 
-#if defined(SEEED_XIAO_M0) || defined(NRF52840_XXAA) || defined(ESP32)
+
+#ifdef SEEED_XIAO_M0
     #define SERIAL Serial
-#else
+#elif defined(ARDUINO_SAMD_VARIANT_COMPLIANCE)
     #define SERIAL SerialUSB
+#else
+    #define SERIAL Serial
 #endif
 
 #ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
@@ -50,7 +53,6 @@
 #else
     #define RSTPIN  2
 #endif
-
 
 
 SHT35 sensor(SCLPIN);
