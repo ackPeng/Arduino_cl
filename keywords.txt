@@ -1,20 +1,29 @@
-  
 #######################################
-# Syntax Coloring Map For Grove Temperature sensor SHT35
+# Syntax Coloring Map AnalogAccelermeter
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
-KEYWORD1	SHT35
 
+ADXL335	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-KEYWORD2	init
-KEYWORD2	read_meas_data_single_shot
+begin	KEYWORD2
+getXYZ	KEYWORD2
+getAcceleration	KEYWORD2	
 
 #######################################
 # Constants (LITERAL1)
 #######################################
+X_AXIS_PIN	LITERAL1
+Y_AXIS_PIN	LITERAL1
+Z_AXIS_PIN	LITERAL1
+ADC_AMPLITUDE	LITERAL1
+ADC_REF	LITERAL1
+ZERO_X	LITERAL1
+ZERO_Y	LITERAL1
+ZERO_Z	LITERAL1
+SENSITIVITY	LITERAL1
