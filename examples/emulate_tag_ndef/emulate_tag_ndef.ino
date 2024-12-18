@@ -80,7 +80,7 @@ void loop()
 
     nfc.getContent(&tag_buf, &length);
     NdefMessage msg = NdefMessage(tag_buf, length);
-    msg.print();
+    // msg.print();
   }
 
   delay(1000);

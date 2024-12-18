@@ -46,6 +46,11 @@
   PN532_I2C pn532i2c(Wire);
   PN532 nfc(pn532i2c);	
 #endif
+
+#ifdef USE_TINYUSB
+#include <Adafruit_TinyUSB.h>
+#endif
+
 void setup(void) {
   Serial.begin(115200);
   Serial.println("Hello!");

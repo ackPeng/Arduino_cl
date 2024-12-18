@@ -50,7 +50,7 @@ void loop()
     if (msgSize > 0)
     {
         NdefMessage msg = NdefMessage(ndefBuf, msgSize);
-        msg.print();
+        // msg.print();
         Serial.println("\nSuccess");
     }
     else
