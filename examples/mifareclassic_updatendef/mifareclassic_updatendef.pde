@@ -32,6 +32,10 @@
   #include <PN532.h>
 #endif
 
+#ifdef USE_TINYUSB
+#include <Adafruit_TinyUSB.h>
+#endif
+
 
 /*  
     We can encode many different kinds of pointers to the card,

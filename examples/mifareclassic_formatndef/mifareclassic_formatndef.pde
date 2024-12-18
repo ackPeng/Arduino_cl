@@ -35,6 +35,11 @@
   #include <PN532_I2C.cpp>
   #include <PN532.h>
 #endif
+
+#ifdef USE_TINYUSB
+#include <Adafruit_TinyUSB.h>
+#endif
+
 /*
     We can encode many different kinds of pointers to the card,
     from a URL, to an Email address, to a phone number, and many more

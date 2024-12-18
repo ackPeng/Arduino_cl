@@ -21,6 +21,7 @@
 #elif 1
   #define NFC_INTERFACE_HSU
   #include <PN532_HSU.h>
+  #include <PN532_HSU.cpp>
   #include <PN532.h>
       
   PN532_HSU pn532hsu(Serial1);
@@ -35,6 +36,11 @@
   PN532_I2C pn532i2c(Wire);
   PN532 nfc(pn532i2c);
 #endif
+
+#ifdef USE_TINYUSB
+#include <Adafruit_TinyUSB.h>
+#endif
+
 
 void setup(void) {
   // has to be fast to dump the entire memory contents!

@@ -33,6 +33,10 @@
   #include <PN532.h>
 #endif
 
+#ifdef USE_TINYUSB
+#include <Adafruit_TinyUSB.h>
+#endif
+
 #define NR_SHORTSECTOR          (32)    // Number of short sectors on Mifare 1K/4K
 #define NR_LONGSECTOR           (8)     // Number of long sectors on Mifare 4K
 #define NR_BLOCK_OF_SHORTSECTOR (4)     // Number of blocks in a short sector

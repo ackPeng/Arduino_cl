@@ -28,7 +28,9 @@ jobs:
         run: |
           # eg: echo "<repo>" >> depend.list
           echo "TheNitek/NDEF" >> depend.list
+          echo "miguelbalboa/rfid" >> depend.list
 
+        
       - name: Create a ignore.list file
         run: |
           # eg: echo "<path>,<fqbn>" >> ignore.list

@@ -23,6 +23,11 @@ PN532 nfc(pn532hsu);
 #include <PN532.h>
 #endif
 
+#ifdef USE_TINYUSB
+#include <Adafruit_TinyUSB.h>
+#endif
+
+
 void setup()
 {
   Serial.begin(115200);
