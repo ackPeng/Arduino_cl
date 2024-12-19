@@ -1,10 +1,28 @@
-## Accelerometer_ADXL372  [![Build Status](https://travis-ci.com/Seeed-Studio/Accelerometer_ADXL372.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Accelerometer_ADXL372)
+BLDC Motor Shield (TB6605)  [![Build Status](https://travis-ci.com/Seeed-Studio/BLDC_Motor_Shield_TB6605.svg?branch=master)](https://travis-ci.com/Seeed-Studio/BLDC_Motor_Shield_TB6605)
+=================================  
 
 
-This is an ultralow power MEMS accelerometer providing you at 100mg/LSB resolution and large ±200g measurement range. It's base on ADXL372.
+Introduction of sensor
+----------------------------  
+>1.  The TB6605 is used to control the motor, it contains direction control, waveform output, brake function and speed regulation.
+>2.  The entire solution uses Arduino and motor shield, motors and LCD displays.
 
-----
-This software is written by Yihui Xiong for seeed studio<br>
+***
+Usage:
+==========  
+Download all the source files and open TB6605_demo/TB6605_demo.ino in arduino IDE. Compile and download and run it on a arduino board.
+
+****
+Notice:
+=========
+>1. This TB6605_demo/TB6605_demo.ino is just a simple display demo for general use case.
+>2. Do not force the sliding rheostat, it may cause damage. The maximum speed is 4000.
+
+
+
+***
+This software is written by Jenkin for seeed studio<br>
+Email:zhengxing.lu@seeed.cc
 and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt for more information.<br>
 
 Contributing to this software is warmly welcomed. You can do this basically by<br>
@@ -12,8 +30,7 @@ Contributing to this software is warmly welcomed. You can do this basically by<b
 for operating guide). Adding change log and your contact into file header is encouraged.<br>
 Thanks for your contribution.
 
-Seeed is a hardware innovation platform for makers to grow inspirations into differentiating products. By working closely with technology providers of all scale, Seeed provides accessible technologies with quality, speed and supply chain knowledge. When prototypes are ready to iterate, Seeed helps productize 1 to 1,000 pcs using in-house engineering, supply chain management and agile manufacture forces. Seeed also team up with incubators, Chinese tech ecosystem, investors and distribution channels to portal Maker startups beyond.
-
-
-[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/Accelerometer_ADXL372)](https://github.com/igrigorik/ga-beacon)
-
+Seeed Studio is an open hardware facilitation company based in Shenzhen, China. <br>
+Benefiting from local manufacture power and convenient global logistic system, <br>
+we integrate resources to serve new era of innovation. Seeed also works with <br>
+global distributors and partners to push open hardware movement.<br>
