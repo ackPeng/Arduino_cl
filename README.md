@@ -1,52 +1,28 @@
-Grove temperature sensor MAX31850K  [![Build Status](https://travis-ci.com/Seeed-Studio/Seeed_MAX31850K.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Seeed_MAX31850K)
-=============================================================  
-
-![MAX31850](https://github.com/linux-downey/Grove_Temperature_sensor_MAX31850K/blob/master/MAX31850K_module.png)  
+Grove_IR_Matrix_Temperature_sensor_AMG8833  [![Build Status](https://travis-ci.com/Seeed-Studio/Seeed_AMG8833.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Seeed_AMG8833)
+==================  
 
 Introduction of sensor
 ----------------------------  
-The MAX31850/MAX31851 cold-junction compensated, 1-WireM thermocouple-to-digital converters perform
-cold-junction compensation and digitize the signal from
-a K-, J-, N-, T-, S-, R-, or E-type thermocouple. The converters resolve temperatures to 0.25NC, allow readings
-as high as +1768NC and as low as -270NC, and exhibit
-thermocouple accuracy of 8 LSBs (2NC) for temperatures
-ranging from -200NC to +700NC. 
+The AGM8833 is a high Precision Infrared Array Sensor based on Advanced MEMS Technology.
 
 ***
-Before using:
-==============
-The communication of module is base on one-wire,Sopports two use modes:  
->* single mode(one host and one slave)  
->* multiple mode(one host and multiple slaves,base on rom addressing-one wire search algorithm.This is more complex and subtle than IIC addressing.).**In multiple mode ,you can change the address of the module by changing the Pad connection method on the back of board,default is all to low.**
+Usage  
+=======
+Download all the source files.  
+There are three examples for user.  
+>* **exambles/basic_demo.ino**,From this example,you can get the 64 channels(8X8) IR sensor raw data from serial-watch-window.  
+>* **exambles/TFT_screen_demo.ino**,From this example,we use a [TFT screen](https://www.seeedstudio.com/2.8-TFT-Touch-Shield-V2.0-p-1286.html) to show the 8X8 matrix data,Different data map different   colors.So we can make a simple、low resolution thermal imaging display system.Through this visual interface, you can see the results   very intuitively
+>* **exambles/thermal_cam_interpolate/thermal_cam_interpolate.ino**,Use an interpolation algorithm to extend an 8X8 resolution gragh to a 32X32 resolution gragh.**But this example need more ram memory,doen't support the small ram arduino board like UNO.but ATmega2560 is OK.**
+***By the way ,the TFT screen library does not support arduino M0,if you want to use arduino M0,you should find another screen.***  
 
-Usage:
-==========  
-Download all the source files.
-Attach the type K Thermocouple to the module port.
-Note that the **one-wire pin is D3**.
-There are two examples for user to use.
->* **example/Single/Single.ino**,single mode.  
->* **example/Multiple/Multiple.ino**,multiple mode,Use this demo when two or more modules attach to host arduino board.It also can be used in the situation that only attach one module.But we don't recommend such operation,Cause it will reduce the operating efficiency of the program.  
+In addition:  
+---------------------
+There is a INT pad on Seeed's AMG8833 module,This pad correspond to INT pin,when sensor generate a interruption(usually the temperature beyond limit),The pin turns to low,Otherwise stays high.Without this INT pin,you need to polling for sensor result value.  
 
-Extended:
-------------
-[One-wire search algorithm](https://www.maximintegrated.com/cn/app-notes/index.mvp/id/187) for chinese.  
-
-[One-wire search algorithm](http://www.sal.wisc.edu/PFIS/docs/rss-nir/archive/public/Product%20Manuals/maxim-ic/AN187.pdf) for english.
-
-Read the source code and refer to manual Simultaneously.This algorithm is worth a look if you are a software lovers.
-***
 
 Reference:
 ===============
 Refer to the **/doc** to get more detail.
-
-***
-
-declaration:
-=====
-This most part of arduino library is based on [Dallas temperature library](https://github.com/tomdeboer/SparkCoreDallasTemperature).
-
 
 
 ***
