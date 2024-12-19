@@ -34,6 +34,14 @@
     #include "Wire.h"
 #endif
 
+
+#if defined(NRF52840_XXAA)
+#ifdef USE_TINYUSB
+#include <Adafruit_TinyUSB.h>
+#endif
+#endif
+
+
 #define SeeedOLED_Max_X                 127 //128 Pixels
 #define SeeedOLED_Max_Y                 63  //64  Pixels
 
