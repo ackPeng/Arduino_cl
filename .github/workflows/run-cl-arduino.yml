@@ -27,7 +27,7 @@ jobs:
       - name: Create a depend.list file
         run: |
           # eg: echo "<repo>" >> depend.list
-        echo "adafruit/Adafruit_TinyUSB_ArduinoCore" >> depend.list
+          echo "adafruit/Adafruit_TinyUSB_ArduinoCore" >> depend.list
 
 
       - name: Create a ignore.list file
