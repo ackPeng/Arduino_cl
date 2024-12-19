@@ -28,6 +28,8 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
 */
+#include <Wire.h>
+#include <SeeedOLED.h>
 
 #ifdef SEEED_XIAO_M0
     #define RefVal 5.0
