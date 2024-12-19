@@ -1,11 +1,11 @@
 /*
-    basic_demo.ino
-    Driver for DIGITAL I2C HUMIDITY AND TEMPERATURE SENSOR
+    HDC1000.h
+    A library for HDC1000 1.0
 
-    Copyright (c) 2018 Seeed Technology Co., Ltd.
+    Copyright (c) 2015 seeed technology inc.
     Website    : www.seeed.cc
-    Author     : downey
-    Create Time: June 2018
+    Author     : Pillar Zuo (baozhu.zuo@seeed.cc)
+    Create Time: April 2015
     Change Log :
 
     The MIT License (MIT)
@@ -29,52 +29,22 @@
     THE SOFTWARE.
 */
 
-#include "Seeed_LDC1612.h"
-#include "math.h"
+#include <Wire.h>
+#include <HDC1000.h>
 
-LDC1612 sensor;
+HDC1000 mySensor;
+//HDC1000 mySensor(0x41, 2) <-- DRDYn enabled and connected to Arduino pin 2 (allows for faster measurements).
 
 void setup() {
-    Serial.begin(115200);
-    delay(100);
-    Serial.println("start!");
-
-    sensor.init();
-
-    /*Enable INT-PIN,Interrupted after measurement is completed.*/
-    //sensor.set_ERROR_CONFIG(0x01);
-
-    /*multiple channel use case configuration.*/
-    if (sensor.LDC1612_mutiple_channel_config()) {
-        Serial.println("can't detect sensor!");
-        while (1);
-    }
+    Serial.begin(9600);
+    mySensor.begin();
 }
-
 
 void loop() {
-    u32 result_channel0 = 0;
-    u32 result_channel1 = 0;
-
-    /*shows the status of sensor.*/
-    //sensor.get_sensor_status();
-
-    /*sensor result value.you can make a lot of application according to its changes.*/
-    sensor.get_channel_result(0, &result_channel0);
-    sensor.get_channel_result(1, &result_channel1);
-
-    if (0 != result_channel0) {
-        Serial.print("result_channel0 is ");
-        Serial.println(result_channel0);
-    }
-    if (0 != result_channel1) {
-        Serial.print("result_channel1 is ");
-        Serial.println(result_channel1);
-    }
+    Serial.print("Temperature: ");
+    Serial.print(mySensor.getTemp());
+    Serial.print("C, Humidity: ");
+    Serial.print(mySensor.getHumi());
+    Serial.println("%");
     delay(1000);
 }
-
-
-
-
-
