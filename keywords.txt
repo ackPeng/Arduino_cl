@@ -1,26 +1,30 @@
+  
 #######################################
-# Syntax Coloring Map For debug_lvc
+# Syntax Coloring Map For Accelerometer ADXL372
 #######################################
-
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
-PCA9685	KEYWORD1
-ServoDriver	KEYWORD1
+
+ADXL372	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-init	KEYWORD2
-setServoPulseRange	KEYWORD2
-setAngle	KEYWORD2
-setPwm	KEYWORD2
-setFrequency	KEYWORD2
-reset	KEYWORD2
+
+power_ctrl	KEYWORD2
+timing_ctrl	KEYWORD2
+measurement_ctrl	KEYWORD2
+status	KEYWORD2
+id	KEYWORD2
+fifo_read	KEYWORD2
+samples_in_fifo	KEYWORD2
+
 
 #######################################
 # Constants (LITERAL1)
 #######################################
-PCA9685_DEFAULT_I2C_ADDR	LITERAL1
+DATA_READY	LITERAL1
+FIFO_READY	LITERAL1
 
 
