@@ -34,11 +34,8 @@
     #include "Wire.h"
 #endif
 
-
-#if defined(NRF52840_XXAA)
 #ifdef USE_TINYUSB
 #include <Adafruit_TinyUSB.h>
-#endif
 #endif
 
 
