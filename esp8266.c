@@ -15,7 +15,7 @@ static inline uint32_t _getCycleCount(void) {
  #ifdef ESP8266 
   __asm__ __volatile__("rsr %0,ccount":"=a" (ccount));
 #else defined(ESP32)
-  __asm__ __volatile__("rsr %0,ccount":"=r" (ccount));
+  __asm__ __volatile__("csrr %0, mcycle" : "=r" (ccount));
 #endif
   return ccount;
 
