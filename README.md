@@ -1,26 +1,28 @@
-Grove RGB LED Matrix   [![Build Status](https://travis-ci.com/Seeed-Studio/Seeed_RGB_LED_Matrix.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Seeed_RGB_LED_Matrix)
-==============
+Grove touch sensor MPR121  [![Build Status](https://travis-ci.com/Seeed-Studio/Seeed_MRP121.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Seeed_MRP121)
+=================================  
+ 
 
 
-Introduction of LED matrix.
+Introduction of sensor
 ----------------------------  
-This is the driver for Gvove 8X8 RGB LED matrix.
-There are several examples for RGB LED matrix.  
-Including build-in examples:
+The MPR121 features an increased internal intelligence plus Freescale’s second generation capacitance detection engine.
 
-    rgb_display_emoji
-    rgb_display_animation
-    rgb_display_block
-    rgb_display_clockwise
-    rgb_display_color_bar
-    rgb_display_color_wave
-    rgb_display_ledbars
-    rgb_display_num
-    rgb_display_string
-    rgb_user_custom
+***
+Usage:
+==========  
+Download all the source files and open examples/MPR121_demo/MPR121_demo.ino in arduino IDE. Compile and download and run it on a arduino board.
+
+****
+Notice:
+=========
+>1. This example/MPR121_demo/MPR121_demo.ino is just a simple touch/release demo for general use case.
+>2. The pin INT on the board is stay high,When the electrode is touched(key is press),trigger a low level,then return to high.
+>3. If you want to achieve a more precise control,Set sensor's baseline,threshold.
+    Touch condition: Baseline - Electrode filtered data > Touch threshold 
+    Release condition: Baseline - Electrode filtered data < Release threshold
+    Get more detail from **doc/MPR121_touch_datasheet.pdf** 
 
 
-Please refer to APIs of **grove_two_rgb_led_matrix.h** to get more detail.
 
 ***
 This software is written by downey  for seeed studio<br>

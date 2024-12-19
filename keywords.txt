@@ -1,34 +1,24 @@
   
 #######################################
-# Syntax Coloring Map For Seeed_RGB_Led_Matrix
+# Syntax Coloring Map For Grove touch sensor MPR121
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
-KEYWORD1   SeeedLedMatrix 
+KEYWORD1	Mpr121
 
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-KEYWORD2    getDeviceVID
-KEYWORD2    getDevicePID
-KEYWORD2	changeDeviceBaseAddress
-KEYWORD2	defaultDeviceAddress
-KEYWORD2	turnOnLedFlash
-KEYWORD2	turnOffLedFlash
-KEYWORD2	displayBar
-KEYWORD2	displayColorBar
-KEYWORD2	displayColorWave
-KEYWORD2	displayClockwise
-KEYWORD2	displayColorAnimation
-KEYWORD2	displayEmoji
-KEYWORD2	displayNumber
-KEYWORD2	displayString
-KEYWORD2	displayFrames
-KEYWORD2	displayColorBlock
-KEYWORD2	stopDisplay
+KEYWORD2	begin
+KEYWORD2	check_status_register
+KEYWORD2	select_mode
+KEYWORD2	set_globle_param
+KEYWORD2	set_debounce
+KEYWORD2	set_threshold
+
 #######################################
 # Constants (LITERAL1)
 #######################################
