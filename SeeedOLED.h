@@ -34,9 +34,7 @@
     #include "Wire.h"
 #endif
 
-#ifdef USE_TINYUSB
-#include <Adafruit_TinyUSB.h>
-#endif
+
 
 
 #define SeeedOLED_Max_X                 127 //128 Pixels

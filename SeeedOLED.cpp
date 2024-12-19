@@ -25,7 +25,7 @@
 #include "Wire.h"
 #include "SeeedOLED.h"
 
-#if (defined(__AVR__) || defined(__SAMD21G18A__) || defined(NRF52840_XXAA) || defined(XIAO_RA4M1))
+#if (defined(__AVR__) || defined(__SAMD21G18A__) || defined(NRF52840_XXAA) || defined(ARDUINO_XIAO_RA4M1))
     #include <avr/pgmspace.h>
 #else
     #include <pgmspace.h>
