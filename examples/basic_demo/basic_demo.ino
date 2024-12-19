@@ -4,19 +4,19 @@
 /*SAMD core*/
 
 #ifdef SEEED_XIAO_M0
-    #define SERIAL_DB Serial
+    #define SERIAL Serial
 #elif defined(ARDUINO_SAMD_VARIANT_COMPLIANCE)
-    #define SERIAL_DB SerialUSB
+    #define SERIAL SerialUSB
 #else
-    #define SERIAL_DB Serial
+    #define SERIAL Serial
 #endif
 
 VEML6070 sensor;
 
 char* UV_str[] = {"low level", "moderate level", "high_level", "very high", "extreme"};
 
-err_t read_UV() {
-    err_t ret = NO_ERROR;
+veml_err_t read_UV() {
+    veml_err_t ret = NO_ERROR;
     u16 step;
     sensor.wait_for_ready();
     CHECK_RESULT(ret, sensor.read_step(step));

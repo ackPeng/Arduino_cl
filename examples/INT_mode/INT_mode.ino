@@ -4,11 +4,11 @@
 /*SAMD core*/
 
 #ifdef SEEED_XIAO_M0
-    #define SERIAL_DB Serial
+    #define SERIAL Serial
 #elif defined(ARDUINO_SAMD_VARIANT_COMPLIANCE)
-    #define SERIAL_DB SerialUSB
+    #define SERIAL SerialUSB
 #else
-    #define SERIAL_DB Serial
+    #define SERIAL Serial
 #endif
 
 VEML6070 sensor;
