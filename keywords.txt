@@ -1,67 +1,43 @@
-  
 #######################################
-# Syntax Coloring Map For 
+# Syntax Coloring Map DigitalAccelerometer_MMA7660FC
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
 
-
+MMA7660	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-
 init	KEYWORD2
-importPara	KEYWORD2
-readXYZ	KEYWORD2
-getAcceleration	KEYWORD2
-getWHO_AM_I	KEYWORD2
-setODR	KEYWORD2
 setMode	KEYWORD2
-setAxis	KEYWORD2
-setFullScale	KEYWORD2
-setBDU	KEYWORD2
-setBLE	KEYWORD2
-setSelfTest	KEYWORD2
-setSelfTestSign	KEYWORD2
-turnONEnable	KEYWORD2
-setBOOT	KEYWORD2
-setFDS	KEYWORD2
-setSPI34Wire	KEYWORD2
-setHPFMode	KEYWORD2
-setHPFCutOFF	KEYWORD2
-setFilterDataSel	KEYWORD2
-setReference	KEYWORD2
-setIntHighLow	KEYWORD2
-setIntPPOD	KEYWORD2
-setInt1DataSign	KEYWORD2
-setInt2DataSign	KEYWORD2
-setInt1HPEnable	KEYWORD2
-setInt2HPEnable	KEYWORD2
-int1LatchEnable	KEYWORD2
-int2LatchEnable	KEYWORD2
-resetInt1Latch	KEYWORD2
-resetInt2Latch	KEYWORD2
-setInt1Configuration	KEYWORD2
-setInt2Configuration	KEYWORD2
-setInt1Threshold	KEYWORD2
-setInt2Threshold	KEYWORD2
-setInt1Duration	KEYWORD2
-setInt2Duration	KEYWORD2
-setInt1Mode	KEYWORD2
-setInt2Mode	KEYWORD2
-getInt1Src	KEYWORD2
-getInt2Src	KEYWORD2
-getInt1SrcBit	KEYWORD2
-getInt2SrcBit	KEYWORD2
-getStatusReg	KEYWORD2
-getStatusBit	KEYWORD2
-getAccAxesRaw	KEYWORD2
-get6DPositionInt1	KEYWORD2
-get6DPositionInt2	KEYWORD2
+setSampleRate	KEYWORD2
+getXYZ	KEYWORD2
+getAcceleration	KEYWORD2	
 
 #######################################
 # Constants (LITERAL1)
 #######################################
+MMA7660_X	LITERAL1
+MMA7660_Y	LITERAL1
+MMA7660_Z	LITERAL1
+MMA7660_TILT	LITERAL1
+MMA7660_SRST	LITERAL1
+MMA7660_SPCN	LITERAL1
+MMA7660_INTSU	LITERAL1
+MMA7660_MODE	LITERAL1
+MMA7660_STAND_BY	LITERAL1
+MMA7660_ACTIVE	LITERAL1
+MMA7660_SR	LITERAL1
+AUTO_SLEEP_120	LITERAL1
+AUTO_SLEEP_64	LITERAL1
+AUTO_SLEEP_32	LITERAL1
+AUTO_SLEEP_16	LITERAL1
+AUTO_SLEEP_8	LITERAL1
+AUTO_SLEEP_4	LITERAL1
+AUTO_SLEEP_2	LITERAL1
+AUTO_SLEEP_1	LITERAL1
+MMA7660_PDET	LITERAL1
+MMA7660_PD	LITERAL1
