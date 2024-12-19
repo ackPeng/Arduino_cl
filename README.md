@@ -1,6 +1,6 @@
-# Seeed BMA456 Library  [![Build Status](https://travis-ci.com/Seeed-Studio/Seeed_BMA456.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Seeed_BMA456)
+# Seeed LTC2941 Library  [![Build Status](https://travis-ci.com/Seeed-Studio/Seeed_LTC2941.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Seeed_LTC2941)
 
-This is the Arduino library for Seeed's BMA456 based products.
+This is the Arduino library for Seeed's LTC2941 based products.
 
 ----
 
