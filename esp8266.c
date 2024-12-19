@@ -12,8 +12,13 @@
 static uint32_t _getCycleCount(void) __attribute__((always_inline));
 static inline uint32_t _getCycleCount(void) {
   uint32_t ccount;
+ #ifdef ESP8266 
   __asm__ __volatile__("rsr %0,ccount":"=a" (ccount));
+#else defined(ESP32)
+  __asm__ __volatile__("rsr %0,ccount":"=r" (ccount));
+#endif
   return ccount;
+
 }
 
 #ifdef ESP8266
