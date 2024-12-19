@@ -27,6 +27,9 @@ jobs:
       - name: Create a depend.list file
         run: |
           # eg: echo "<repo>" >> depend.list
+          echo "Seeed-Studio/Grove_LCD_RGB_Backlight" >> depend.list
+
+
 
       - name: Create a ignore.list file
         run: |
