@@ -106,10 +106,10 @@ void ITG3200::getAngularVelocity(float* ax, float* ay, float* az) {
     *az = z / 14.375;
 }
 void ITG3200::zeroCalibrate(unsigned int samples, unsigned int sampleDelayMS) {
-    long x_offset_temp = 0;
-    long y_offset_temp = 0;
-    long z_offset_temp = 0;
-    long x, y, z;
+    int x_offset_temp = 0;
+    int y_offset_temp = 0;
+    int z_offset_temp = 0;
+    int x, y, z;
     x_offset = 0;
     y_offset = 0;
     z_offset = 0;
