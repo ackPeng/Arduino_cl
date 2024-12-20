@@ -19,12 +19,24 @@
     RH_RF95<SoftwareSerial> rf95(COMSerial);
 #endif
 
-#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+
+#ifdef SEEED_XIAO_M0
+    #define COMSerial Serial1
+    #define ShowSerial Serial
+
+    RH_RF95<Uart> rf95(COMSerial);
+#elif defined(ARDUINO_SAMD_VARIANT_COMPLIANCE)
     #define COMSerial Serial1
     #define ShowSerial SerialUSB
 
     RH_RF95<Uart> rf95(COMSerial);
+#else
+    #define COMSerial Serial1
+    #define ShowSerial Serial
+
+    RH_RF95<Uart> rf95(COMSerial);
 #endif
+
 
 #ifdef ARDUINO_ARCH_STM32F4
     #define COMSerial Serial
