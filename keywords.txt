@@ -1,43 +1,57 @@
 #######################################
-# Syntax Coloring Map DigitalAccelerometer_MMA7660FC
+# Syntax Coloring Map MusicPlayer_v1_8
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
 
-MMA7660	KEYWORD1
+MusicPlayer	KEYWORD1
+spl_t	KEYWORD1
+playingstatetype	KEYWORD1
+ctrlState_t	KEYWORD1
+playMode_t	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-init	KEYWORD2
-setMode	KEYWORD2
-setSampleRate	KEYWORD2
-getXYZ	KEYWORD2
-getAcceleration	KEYWORD2	
+begin	KEYWORD2
+playOne	KEYWORD2
+addToPlaylist	KEYWORD2
+scanAndPlayAll	KEYWORD2
+setVolume	KEYWORD2
+setPlayMode	KEYWORD2
+deleteSong	KEYWORD2
+attachDigitOperation	KEYWORD2
+attachAnalogOperation	KEYWORD2
+play	KEYWORD2
+keyEnable	KEYWORD2
+keyDisable	KEYWORD2
+analogControlEnable	KEYWORD2
+digitalControlEnable	KEYWORD2
+opPlay	KEYWORD2
+opPause	KEYWORD2
+opStop	KEYWORD2
+opVolumeUp	KEYWORD2
+opVolumeDown	KEYWORD2
+opNextSong	KEYWORD2
+opPreviousSong	KEYWORD2
+opFastForward	KEYWORD2
+opFastRewind	KEYWORD2
+
 
 #######################################
 # Constants (LITERAL1)
 #######################################
-MMA7660_X	LITERAL1
-MMA7660_Y	LITERAL1
-MMA7660_Z	LITERAL1
-MMA7660_TILT	LITERAL1
-MMA7660_SRST	LITERAL1
-MMA7660_SPCN	LITERAL1
-MMA7660_INTSU	LITERAL1
-MMA7660_MODE	LITERAL1
-MMA7660_STAND_BY	LITERAL1
-MMA7660_ACTIVE	LITERAL1
-MMA7660_SR	LITERAL1
-AUTO_SLEEP_120	LITERAL1
-AUTO_SLEEP_64	LITERAL1
-AUTO_SLEEP_32	LITERAL1
-AUTO_SLEEP_16	LITERAL1
-AUTO_SLEEP_8	LITERAL1
-AUTO_SLEEP_4	LITERAL1
-AUTO_SLEEP_2	LITERAL1
-AUTO_SLEEP_1	LITERAL1
-MMA7660_PDET	LITERAL1
-MMA7660_PD	LITERAL1
+PS_IDLE	LITERAL1
+PS_PLAY	LITERAL1
+PS_PAUSE	LITERAL1
+PS_PRE_PLAY	LITERAL1
+PS_POST_PLAY	LITERAL1
+PS_PRE_RECORD	LITERAL1
+PS_RECORDING	LITERAL1
+PS_POST_RECORD	LITERAL1
+
+
+
+
