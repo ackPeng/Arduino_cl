@@ -99,7 +99,7 @@ void ITG3200::getXYZ(int16_t* x, int16_t* y, int16_t* z) {
 }
 /*Function: Get the angular velocity and its unit is degree per second.*/
 void ITG3200::getAngularVelocity(float* ax, float* ay, float* az) {
-    int x, y, z;
+    int16_t x, y, z;
     getXYZ(&x, &y, &z);
     *ax = x / 14.375;
     *ay = y / 14.375;
