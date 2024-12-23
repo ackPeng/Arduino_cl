@@ -1,25 +1,27 @@
-  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_Haptic_Motor.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_Haptic_Motor)
-Grove_Haptic_Motor
-===
+## Grove_6Axis_Accelerometer_And_Compass  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_6Axis_Accelerometer_And_Compass_v2.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_6Axis_Accelerometer_And_Compass_v2)
 
-<img src=https://statics3.seeedstudio.com/images/product/105020011%201.jpg width=300>
+<img src=https://statics3.seeedstudio.com/product/101020081%201_01.jpg width=300> <img src=https://statics3.seeedstudio.com/product/101020081%201_02.jpg width=300>
+
+[Grove - 6-Axis Accelerometer&Compass v2.0](https://www.seeedstudio.com/s/Grove-6-Axis-Accelerometer%26Compass-v2.0-p-2476.html)
 
 
-[Grove - Haptic Motor](https://www.seeedstudio.com/Grove%C2%A0-%C2%A0Haptic%C2%A0Motor-p-2546.html)
+The Grove 6-Axis Accelerometer & Compass is a 3-axis accelerometer combined with a 3-axis magnetic sensor.  It is based on the sensor module LSM303DLH which has a selectable linear acceleration full scale range of ±2g / ±4g / ±8g and a selectable magnetic field full scale range of ±1.3 /±1.9 / ±2.5 / ±4.0 / ±4.7 / ±5.6 / ±8.1 gauss. Both the magnetic parts and the accelerometer parts can be powered down separately to reduce the power consumption. The Arduino can get these data via the I2C interface.
 
-Grove - Haptic motor is a Grove module integrated with DRV2605L which will give your project more feelings. This motor is specially designed for various effects, such as to ramp the vibration level up and down, for wearable and IoT devices. Right we have developed an easy-to-use library which can simulate 123 kinds of vibrating modes in total and this will make your prototyping very quickly. Also, you can develop more advanced functions with the driver DRV2605L which improves actuator performance in terms of acceleration consistency, starting time, and brake time and is accessible through a shared I2C compatible bus or PWM input signal.
-
-For more information please visit [wiki page](http://wiki.seeedstudio.com/Grove-Haptic_Motor/)
+For more information, please refer to [wiki][1]
+See also: [LSM303DLH Sensor Module Datasheet][2]
 
 ----
+This software is written by Frankie Chu for [Seeed Technology Inc.](http://www.seeed.cc) and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt/LICENSE for the details of MIT license.<br>
 
-This software is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt for more information.<br>
+Contributing to this software is warmly welcomed. You can do this basically by<br>
+[forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
+for operating guide). Adding change log and your contact into file header is encouraged.<br>
+Thanks for your contribution.
+
+Seeed is a hardware innovation platform for makers to grow inspirations into differentiating products. By working closely with technology providers of all scale, Seeed provides accessible technologies with quality, speed and supply chain knowledge. When prototypes are ready to iterate, Seeed helps productize 1 to 1,000 pcs using in-house engineering, supply chain management and agile manufacture forces. Seeed also team up with incubators, Chinese tech ecosystem, investors and distribution channels to portal Maker startups beyond.
 
 
-Seeed Studio is an open hardware facilitation company based in Shenzhen, China. <br>
-Benefiting from local manufacture power and convenient global logistic system, <br>
-we integrate resources to serve new era of innovation. Seeed also works with <br>
-global distributors and partners to push open hardware movement.<br>
+[1]:http://wiki.seeedstudio.com/Grove-6-Axis_AccelerometerAndCompass_V2.0/
+[2]:https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_AccelerometerAndCompass_V2.0/master/res/LSM303D_datasheet.pdf
 
-
-[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/Grove_Haptic_Motor)](https://github.com/igrigorik/ga-beacon)
+[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/6Axis_Accelerometer_And_Compass_v2)](https://github.com/igrigorik/ga-beacon)
