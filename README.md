@@ -1,44 +1,28 @@
-Grove IMU 9DOF   [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_IMU_9DOF.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_IMU_9DOF)
----------------------------------------------------------
-[![Grove IMU 9DOF](https://statics3.seeedstudio.com/images/product/Grove%20IMU%209DOF.jpg)](http://www.seeedstudio.com/depot/Grove-IMU-9DOF-p-1728.html?cPath=25_134)
+## Grove - 6-Axis Accelerometer&Gyroscope  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_6Axis_Accelerometer_And_Compass.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_6Axis_Accelerometer_And_Compass)
 
-Grove - IMU 9DOF is a high performance 9-axis motion tracking module,which is base on MPU-9150.The MPU-9150 is the world's first integrated 9-axis motion tracking device designed for the low power, low cost, and high performance requirements of consumer electronics equipment including smartphones, tablets and wearable sensors .MPU-9150 features three 16-bit ADC for digitizing the gyroscope outputs and three 16-bit ADCs for digitizing the accelerometer outputs and three 13-bit ADCs for digitizing the magnetometer outputs.
-
-Specifications:
-
-- I2C interface 
-- Low cost 
-- 400kHz Fast Mode I2C for communicating with all registers 
-- Digital-output X-, Y-, and Z-Axis angular rate sensors (gyroscopes) with a user-programmable full-scale range of ±250, ±500, ±1000, and ±2000°/sec
-- Digital-output 3-Axis accelerometer with a programmable full scale range of ±2g, ±4g, ±8g and ±16g
-- 3-axis silicon monolithic Hall-effect magnetic sensor with magnetic concentrator
+<img src=https://statics3.seeedstudio.com/images/product/105020012%203.jpg width=300><img src=https://statics3.seeedstudio.com/product/105020012%203_02.jpg width=300>
 
 
+[Grove - 6-Axis Accelerometer&Gyroscope](https://www.seeedstudio.com/s/Grove-6-Axis-Accelerometer%26Gyroscope-p-2606.html)
 
-### Usage:
+The Grove 6-Axis Accelerometer & Compass is a 3-axis accelerometer combined with a 3-axis magnetic sensor.  It is based on the sensor module LSM303DLH which has a selectable linear acceleration full scale range of ±2g / ±4g / ±8g and a selectable magnetic field full scale range of ±1.3 /±1.9 / ±2.5 / ±4.0 / ±4.7 / ±5.6 / ±8.1 gauss. Both the magnetic parts and the accelerometer parts can be powered down separately to reduce the power consumption. The Arduino can get these data via the I2C interface.
 
-This code include some examples which can show you how to use the Grove IMU 9DOF . 
+For more information, please refer to [wiki page][1]
+See also: [LSM303DLH Sensor Module Datasheet][2]
 
-For more information, please refer to [wiki page](http://wiki.seeed.cc/Grove-IMU_9DOF_v2.0/).
-
-    
 ----
-
-
-This software is written by loovee [luweicong@seeedstudio.com](luweicong@seeedstudio.com "luweicong@seeedstudio.com") for seeed studio<br>
-and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt for more information.<br>
+This software is written by Frankie Chu for [Seeed Technology Inc.](http://www.seeed.cc) and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt/LICENSE for the details of MIT license.<br>
 
 Contributing to this software is warmly welcomed. You can do this basically by<br>
 [forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
 for operating guide). Adding change log and your contact into file header is encouraged.<br>
 Thanks for your contribution.
 
-Seeed Studio is an open hardware facilitation company based in Shenzhen, China. <br>
-Benefiting from local manufacture power and convenient global logistic system, <br>
-we integrate resources to serve new era of innovation. Seeed also works with <br>
-global distributors and partners to push open hardware movement.<br>
+Seeed is a hardware innovation platform for makers to grow inspirations into differentiating products. By working closely with technology providers of all scale, Seeed provides accessible technologies with quality, speed and supply chain knowledge. When prototypes are ready to iterate, Seeed helps productize 1 to 1,000 pcs using in-house engineering, supply chain management and agile manufacture forces. Seeed also team up with incubators, Chinese tech ecosystem, investors and distribution channels to portal Maker startups beyond.
 
 
+[1]:http://wiki.seeedstudio.com/Grove-6-Axis_AccelerometerAndGyroscope/
+[2]:https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_AccelerometerAndGyroscope/master/res/LSM6DS3TR.pdf
 
+[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/6Axis_Accelerometer_And_Compass)](https://github.com/igrigorik/ga-beacon)
 
-[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/Bluetooth_Shield_Demo_Code)](https://github.com/igrigorik/ga-beacon)
