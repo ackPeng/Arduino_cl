@@ -29,6 +29,11 @@
     THE SOFTWARE.
 */
 
+#ifdef NRF52840_XXAA
+#ifdef USE_TINYUSB
+#include <Adafruit_TinyUSB.h>
+#endif
+#endif
 
 #ifdef SEEED_XIAO_M0
     #define RefVal 5.0
