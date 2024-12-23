@@ -1,42 +1,26 @@
-Grove Touch sensor CY8C401XX  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_touch_sensor_CY8C40XX.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_touch_sensor_CY8C40XX)
-=======================================
+# Adafruit TCS34725 Color Sensor Driver #  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_I2C_Color_Sensor_TCS3472.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_I2C_Color_Sensor_TCS3472)
 
-Touch sensor,with two bottons and a touch slider.
-----------------------------------  
+## Grove - I2C Color Sensor TCS34372 ##
 
+![Grove - Mini I2C Motor Driver TCS3472](https://statics3.seeedstudio.com/seeed/img/2016-10/8Qe0dAysi8buqDlJz2AnNNXv.jpg)
 
-Introduction:  
-------------------------  
->PSoC® 4 is a scalable and reconfigurable platform architecture for a family of programmable embedded system controllers with an
-ARM® Cortex™-M0+ CPU. It combines programmable and reconfigurable analog and digital blocks with flexible automatic routing.  
-***
+This driver is for the [Grove - I2C Color Sensor TCS34372](https://www.seeedstudio.com/Grove-I2C-Color-Sensor-p-854.html)(Adafruit TCS34725 Breakout.
+    ------> http://www.adafruit.com/products/1334)
+ 
 
+## About this Driver ##
 
-Usage: 
-========== 
->Download all the source files and open one of example,compile,upload,and running.Open the corresponding Serial Port to watch the result. 
+These modules use I2C to communicate, 2 pins are required to  
+interface
 
+Adafruit invests time and resources providing this open source code, 
+please support Adafruit and open-source hardware by purchasing 
+products from Adafruit!
 
+Written by Kevin (KTOWN) Townsend for Adafruit Industries.
+BSD license, check license.txt for more information
+All text above must be included in any redistribution
 
-Notice:
-----------
->1. When you touch the button, the corresponding indicator will turn on,otherwise turn off.
->2. There is a INT pin on the touch sensor board,When the button or slider is pressed,the pin turns to low,otherwise stays high.
-
-
-***
-This software is written by downey  for seeed studio<br>
-Email:dao.huang@seeed.cc
-and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt for more information.<br>
-
-Contributing to this software is warmly welcomed. You can do this basically by<br>
-[forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
-for operating guide). Adding change log and your contact into file header is encouraged.<br>
-Thanks for your contribution.
-
-Seeed Studio is an open hardware facilitation company based in Shenzhen, China. <br>
-Benefiting from local manufacture power and convenient global logistic system, <br>
-we integrate resources to serve new era of innovation. Seeed also works with <br>
-global distributors and partners to push open hardware movement.<br>
-
-
+To download. click the ZIP button in the top bar, and check this tutorial
+for instructions on how to install: 
+http://learn.adafruit.com/adafruit-all-about-arduino-libraries-install-use
