@@ -1,40 +1,34 @@
-Grove High Accuracy Barometer Sensor(2SMPB-02E)  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_2SMPB_02E.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_2SMPB_02E)
-=================================  
+Grove_4Digital_Display  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_4Digit_Display.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_4Digit_Display)
+--------------------------------
 
-![2SMPB-02E](https://github.com/Jenkinlu001/Seeed_Picture/blob/master/2SMPB_02E.jpg)  
+![Grove_4Digital_Display](https://statics3.seeedstudio.com/images/product/4-Digital%20Display.jpg)
 
+[Grove - 4-Digit Display](https://www.seeedstudio.com/Grove-4-Digit-Display-p-1198.html)
 
-Introduction of sensor
-----------------------------  
->1.  High accuracy and small size barometric pressure sensor with low current consumption.
->2.  Measure barometric pressure and temperature with high accuracy.
->3.  Automatically power down non-working circuit to minimize power consumption.
+4 digit display module is usually a 12 pin module. In this Grove gadget, we utilize a TM1637 to scale down the controlling pins into 2 Grove pins. It only takes 2 digital pins of Arduino or Seeeduino to control the content, even the luminance of this display. For projects that require of alpha-numeric display, this can be a nice choice.
 
-***
-Usage:
-==========  
-Download all the source files and open examples/basic_demo/basic_demo.ino in arduino IDE. Compile and download and run it on a arduino board.
+***Library Requirement***
 
-****
-Notice:
-=========
->1. This example/basic_demo/basic_demo.ino is just a simple display demo for general use case.
->2. This example/basic_demo/basic_demo.ino USES NORMAL MODE, 24-bit precision.
->3. If additional precision and sleep time are required,get more detail from **datasheet** .
+Install libraries on Arduino Library Mnager.
+
+	TimerOne - maintained by Paul Stoffregen
 
 
+For connection guide and more information, please refer to [wiki page](http://wiki.seeedstudio.com/Grove-4-Digit_Display/).
 
-***
-This software is written by Jenkin for seeed studio<br>
-Email:zhengxing.lu@seeed.cc
-and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt for more information.<br>
+    
+----
+
+This software is written by Frankie.Chu for for [Seeed Technology Inc.](http://www.seeed.cc) and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt/LICENSE for the details of MIT license. The TimerOne library is refered from the arduino community and its copyright follows the original.
 
 Contributing to this software is warmly welcomed. You can do this basically by<br>
 [forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
 for operating guide). Adding change log and your contact into file header is encouraged.<br>
 Thanks for your contribution.
-********
-Seeed Studio is an open hardware facilitation company based in Shenzhen, China. <br>
-Benefiting from local manufacture power and convenient global logistic system, <br>
-we integrate resources to serve new era of innovation. Seeed also works with <br>
-global distributors and partners to push open hardware movement.<br>
+
+Seeed is a hardware innovation platform for makers to grow inspirations into differentiating products. By working closely with technology providers of all scale, Seeed provides accessible technologies with quality, speed and supply chain knowledge. When prototypes are ready to iterate, Seeed helps productize 1 to 1,000 pcs using in-house engineering, supply chain management and agile manufacture forces. Seeed also team up with incubators, Chinese tech ecosystem, investors and distribution channels to portal Maker startups beyond.
+
+
+
+
+[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/Grove_4Digital_Display)](https://github.com/igrigorik/ga-beacon)
