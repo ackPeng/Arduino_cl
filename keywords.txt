@@ -1,30 +1,20 @@
+  
 #######################################
-# Syntax Coloring Map For Wire
+# Syntax Coloring Map For Grove_touch_sensor_CY8C40XX
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
-GroveMultiSwitch	KEYWORD1
-ButtonEvent_t		KEYWORD1
+KEYWORD1	CY8C
+
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-
-getDevID	KEYWORD2
-getDevVer	KEYWORD2
-setDevAddr	KEYWORD2
-getSwitchCount	KEYWORD2
-setEventMode	KEYWORD2
-getEvent	KEYWORD2
-
-#######################################
-# Instances (KEYWORD2)
-#######################################
-
-
+KEYWORD2	init
+KEYWORD2	get_touch_botton_value
+KEYWORD2	get_touch_slider_value
 #######################################
 # Constants (LITERAL1)
 #######################################
-
