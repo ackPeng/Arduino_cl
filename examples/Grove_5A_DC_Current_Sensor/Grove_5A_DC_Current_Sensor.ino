@@ -32,13 +32,13 @@
 
 #ifdef SEEED_XIAO_M0
     #define RefVal 5.0
-    #define SERIAL Serial
+    #define SER Serial
 #elif defined(ARDUINO_SAMD_VARIANT_COMPLIANCE)
     #define RefVal 3.3
-    #define SERIAL SerialUSB
+    #define SER SerialUSB
 #else
     #define RefVal 5.0
-    #define SERIAL Serial
+    #define SER Serial
 #endif
 //An OLED Display is required here
 //use pin A0
