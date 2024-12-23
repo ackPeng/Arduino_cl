@@ -331,7 +331,7 @@ uint8_t WT2003S<T>::volumeUp() {
     Return: >=0:return value -1:fail
 ****************************************************************/
 template <class T>
-uint8_t WT2003S<T>::playMode(PLAY_MODE mode) {
+uint8_t WT2003S<T>::playMode(PLAY_MODE_WT2003S mode) {
     commandBytes[0] = WT2003S_SET_PLAYMODE;
     commandBytes[1] = mode;
     return sendCommand(2);
@@ -345,7 +345,7 @@ uint8_t WT2003S<T>::playMode(PLAY_MODE mode) {
     Note: if current playing in spi flash ,this API cannt be used
 ****************************************************************/
 template <class T>
-uint8_t WT2003S<T>::cutInPlay(STORAGE device, uint32_t index) {
+uint8_t WT2003S<T>::cutInPlay(STORAGE_WT2003S device, uint32_t index) {
     commandBytes[0] = WT2003S_SET_CUTIN_MODE;
     commandBytes[1] = device;
     commandBytes[2] = index;
@@ -401,7 +401,7 @@ uint8_t WT2003S<T>::writeUserData(uint16_t address, uint32_t data) {
     Return: >=0:return value -1:fail
 ****************************************************************/
 template <class T>
-uint8_t WT2003S<T>::switchWorkDisk(STORAGE disk) {
+uint8_t WT2003S<T>::switchWorkDisk(STORAGE_WT2003S disk) {
     commandBytes[0] = WT2003S_SWITCH_WORKDATA;
     commandBytes[1] = disk;
     return sendCommand(2);

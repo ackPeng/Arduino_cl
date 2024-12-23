@@ -87,13 +87,13 @@ typedef enum {
     SINGLE_CYCLE   = 0x01,
     CYCLE    = 0x02,
     RANDOM   = 0x03,
-} PLAY_MODE;
+} PLAY_MODE_WT2003S;
 
 typedef enum {
     SPIFLASH    = 0x00,
     SD   = 0x01,
     UDISK    = 0x02,
-} STORAGE;
+} STORAGE_WT2003S;
 
 
 template <class T>
@@ -125,12 +125,12 @@ public:
     uint8_t volume(uint8_t vol);
     uint8_t volumeDown();
     uint8_t volumeUp();
-    uint8_t playMode(PLAY_MODE mode);
-    uint8_t cutInPlay(STORAGE device, uint32_t index);
+    uint8_t playMode(PLAY_MODE_WT2003S mode);
+    uint8_t cutInPlay(STORAGE_WT2003S device, uint32_t index);
     uint8_t copySDtoSPIFlash();
     uint8_t copyUDisktoSPIFlash();
     uint8_t writeUserData(uint16_t address,  uint32_t data);
-    uint8_t switchWorkDisk(STORAGE disk);
+    uint8_t switchWorkDisk(STORAGE_WT2003S disk);
 
     int8_t getVolume();
     int8_t getStatus();

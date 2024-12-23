@@ -24,7 +24,7 @@
     THE SOFTWARE.
 */
 #include "WT2605C_Player.h"
-#include <string.h>
+#include <String.h>
 
 template <class T>
 WT2605C<T>::WT2605C() {
@@ -43,7 +43,7 @@ void WT2605C<T>::init(T& serialPort, uint8_t pin) {
 }
 
 template <class T>
-String WT2605C<T>::getStorageName(STORAGE storage) {
+String WT2605C<T>::getStorageName(STORAGE_WT2605C storage) {
     switch (storage) {
         case SPIFLASH:
             return STORAGE_SPIFLASH;
@@ -171,14 +171,14 @@ uint8_t WT2605C<T>::volumeUp() {
 }
 
 template <class T>
-uint8_t WT2605C<T>::playMode(PLAY_MODE mode) {
+uint8_t WT2605C<T>::playMode(PLAY_MODE_WT2605C mode) {
     String cmd = String(AT_HEADER AT_CMD_REPEATMODE "=") + String(((uint32_t)mode)+1);
     _serial->println(cmd);
     return getResult();
 }
 
 template <class T>
-uint8_t WT2605C<T>::cutInPlay(STORAGE device, uint32_t index) {
+uint8_t WT2605C<T>::cutInPlay(STORAGE_WT2605C device, uint32_t index) {
     String cmd = String(AT_HEADER AT_CMD_STEPINPLAY "=") + getStorageName(device) + 
                     String(",") + String(index);
     _serial->println(cmd);

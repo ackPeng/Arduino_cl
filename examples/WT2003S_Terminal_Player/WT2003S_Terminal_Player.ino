@@ -27,14 +27,14 @@
 uint8_t vol = 10;
 uint32_t spi_flash_songs = 0;
 uint32_t sd_songs = 0;
-STORAGE workdisk = SD;
+STORAGE_WT2003S workdisk = SD;
 struct Play_history {
     uint8_t disk;
     uint16_t index;
     char name[8];
 }* SPISong, *SDSong;
 
-void readSongName(struct Play_history* ph, uint32_t num, STORAGE disk) {
+void readSongName(struct Play_history* ph, uint32_t num, STORAGE_WT2003S disk) {
     Mp3Player.volume(0);
     delay(100);
     switch (disk) {
