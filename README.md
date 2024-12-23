@@ -1,22 +1,18 @@
-Grove_Water_Sensor  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_Water_Sensor.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_Water_Sensor)
---------------------------------
+Grove - I2C Color Sensor  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_I2C_Color_Sensor.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_I2C_Color_Sensor)
+------------------------
 
-[![Grove_Water_Sensor](https://statics3.seeedstudio.com/images/101020018%201.jpg)](http://www.seeedstudio.com/depot/twig-water-sensor-p-748.html?cPath=144_151)
+<img src=https://statics3.seeedstudio.com/seeed/img/2016-10/8Qe0dAysi8buqDlJz2AnNNXv.jpg width=300><img src=https://statics3.seeedstudio.com/seeed/img/2016-10/IwioKtqDuksNgjr7XWfLIYjQ.jpg width=300>
 
-The Water Sensor module is part of the Grove system. It indicates whether the sensor is dry, damp or completely immersed in water by measuring conductivity. The sensor traces have a weak pull-up resistor of 1 MΩ. The resistor will pull the sensor trace value high until a drop of water shorts the sensor trace to the grounded trace. Believe it or not this circuit will work with the digital I/O pins of your Arduino or you can use it with the analog pins to detect the amount of water induced contact between the grounded and sensor traces.
+[Grove - I2C Color Sensor](https://www.seeedstudio.com/grove-i2c-color-sensor-p-854.html?cPath=25_27)
 
-### Usage:
+This module is based on the color sensor TCS3414CS with digital output I2C. Based on the 8*2 array of filtered photodiodes and 16-bits analog-to-digital converters, you can gain the color chromaticity of ambient light or the color of objects. Of the 16 photodiodes, 4 have red filters, 4 have green filters, 4 have blue filters and 4 have no filter(clear). With the synchronization input pin, external pulsed light source can provides precise synchronous conversion control.
 
-Just open this ino file with Arduino IDE and play.
+For more information, please refer to [wiki page](http://wiki.seeedstudio.com/Grove-I2C_Color_Sensor/).
 
-Assume that you connected the grove correctly. 
-
-For connection guide and more information, please refer to [wiki page](http://wiki.seeedstudio.com/Grove-Water_Sensor/).
-
-    
 ----
 
-This demo is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt for more information.<br>
+This software is written by Seeed Studio<br>
+and is licensed under [The LGPL License V2.1](http://www.gnu.org/licenses/lgpl-2.1.html). 
 
 Contributing to this software is warmly welcomed. You can do this basically by<br>
 [forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
@@ -31,6 +27,5 @@ global distributors and partners to push open hardware movement.<br>
 
 
 
-[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/Grove_Water_Sensor)](https://github.com/igrigorik/ga-beacon)
 
-
+[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/Grove_I2C_Color_Sensor)](https://github.com/igrigorik/ga-beacon)

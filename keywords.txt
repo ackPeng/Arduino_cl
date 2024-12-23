@@ -1,23 +1,19 @@
 #######################################
-# Syntax Coloring Map For WATER SENSOR
-#######################################
-
-#######################################
 # Datatypes (KEYWORD1)
 #######################################
+
 
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-pins_init   KEYWORD2
-isExposedToWater    KEYWORD2
-soundAlarm  KEYWORD2
-#######################################
-# Instances (KEYWORD2)
-#######################################
+GroveColorSensor	KEYWORD1
+
+readRGB	KEYWORD2
+calculateCoordinate	KEYWORD2
+clearInterrupt	KEYWORD2
+
 
 #######################################
 # Constants (LITERAL1)
 #######################################
-
