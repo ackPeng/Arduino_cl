@@ -1,31 +1,25 @@
-Grove - I2C Color Sensor  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_I2C_Color_Sensor.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_I2C_Color_Sensor)
-------------------------
+Grove_Alcohol_Sensor  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_Alcohol_Sensor.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_Alcohol_Sensor)
+---------------------------------------------------------
 
-<img src=https://statics3.seeedstudio.com/seeed/img/2016-10/8Qe0dAysi8buqDlJz2AnNNXv.jpg width=300><img src=https://statics3.seeedstudio.com/seeed/img/2016-10/IwioKtqDuksNgjr7XWfLIYjQ.jpg width=300>
+[![image](http://www.seeedstudio.com/depot/bmz_cache/6/6d12ac0d0c0b70dd6f38c5a78cf833b7.image.530x397.jpg)](http://www.seeedstudio.com/depot/Grove-Alcohol-Sensor-p-764.html)
 
-[Grove - I2C Color Sensor](https://www.seeedstudio.com/grove-i2c-color-sensor-p-854.html?cPath=25_27)
+Alcohol sensor is semiconductor sensor for alcohol detection. It has good sensitivity and fast response to alcohol, suitable for portable alcohol detector.
 
-This module is based on the color sensor TCS3414CS with digital output I2C. Based on the 8*2 array of filtered photodiodes and 16-bits analog-to-digital converters, you can gain the color chromaticity of ambient light or the color of objects. Of the 16 photodiodes, 4 have red filters, 4 have green filters, 4 have blue filters and 4 have no filter(clear). With the synchronization input pin, external pulsed light source can provides precise synchronous conversion control.
+For more information, please refer to [wiki page](http://garden.seeedstudio.com/index.php?title=Twig_-_Alcohol_Sensor).
 
-For more information, please refer to [wiki page](http://wiki.seeedstudio.com/Grove-I2C_Color_Sensor/).
-
+    
 ----
 
-This software is written by Seeed Studio<br>
-and is licensed under [The LGPL License V2.1](http://www.gnu.org/licenses/lgpl-2.1.html). 
+This software is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt/LICENSE for the details of MIT license.<br>
 
 Contributing to this software is warmly welcomed. You can do this basically by<br>
 [forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
 for operating guide). Adding change log and your contact into file header is encouraged.<br>
 Thanks for your contribution.
 
-Seeed Studio is an open hardware facilitation company based in Shenzhen, China. <br>
-Benefiting from local manufacture power and convenient global logistic system, <br>
-we integrate resources to serve new era of innovation. Seeed also works with <br>
-global distributors and partners to push open hardware movement.<br>
+Seeed is a hardware innovation platform for makers to grow inspirations into differentiating products. By working closely with technology providers of all scale, Seeed provides accessible technologies with quality, speed and supply chain knowledge. When prototypes are ready to iterate, Seeed helps productize 1 to 1,000 pcs using in-house engineering, supply chain management and agile manufacture forces. Seeed also team up with incubators, Chinese tech ecosystem, investors and distribution channels to portal Maker startups beyond.
 
 
 
 
-
-[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/Grove_I2C_Color_Sensor)](https://github.com/igrigorik/ga-beacon)
+[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/Grove_Alcohol_Sensor)](https://github.com/igrigorik/ga-beacon)
