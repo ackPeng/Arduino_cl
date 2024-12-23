@@ -1,26 +1,25 @@
-# Adafruit TCS34725 Color Sensor Driver #  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_I2C_Color_Sensor_TCS3472.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_I2C_Color_Sensor_TCS3472)
+  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_Haptic_Motor.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_Haptic_Motor)
+Grove_Haptic_Motor
+===
 
-## Grove - I2C Color Sensor TCS34372 ##
+<img src=https://statics3.seeedstudio.com/images/product/105020011%201.jpg width=300>
 
-![Grove - Mini I2C Motor Driver TCS3472](https://statics3.seeedstudio.com/seeed/img/2016-10/8Qe0dAysi8buqDlJz2AnNNXv.jpg)
 
-This driver is for the [Grove - I2C Color Sensor TCS34372](https://www.seeedstudio.com/Grove-I2C-Color-Sensor-p-854.html)(Adafruit TCS34725 Breakout.
-    ------> http://www.adafruit.com/products/1334)
- 
+[Grove - Haptic Motor](https://www.seeedstudio.com/Grove%C2%A0-%C2%A0Haptic%C2%A0Motor-p-2546.html)
 
-## About this Driver ##
+Grove - Haptic motor is a Grove module integrated with DRV2605L which will give your project more feelings. This motor is specially designed for various effects, such as to ramp the vibration level up and down, for wearable and IoT devices. Right we have developed an easy-to-use library which can simulate 123 kinds of vibrating modes in total and this will make your prototyping very quickly. Also, you can develop more advanced functions with the driver DRV2605L which improves actuator performance in terms of acceleration consistency, starting time, and brake time and is accessible through a shared I2C compatible bus or PWM input signal.
 
-These modules use I2C to communicate, 2 pins are required to  
-interface
+For more information please visit [wiki page](http://wiki.seeedstudio.com/Grove-Haptic_Motor/)
 
-Adafruit invests time and resources providing this open source code, 
-please support Adafruit and open-source hardware by purchasing 
-products from Adafruit!
+----
 
-Written by Kevin (KTOWN) Townsend for Adafruit Industries.
-BSD license, check license.txt for more information
-All text above must be included in any redistribution
+This software is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt for more information.<br>
 
-To download. click the ZIP button in the top bar, and check this tutorial
-for instructions on how to install: 
-http://learn.adafruit.com/adafruit-all-about-arduino-libraries-install-use
+
+Seeed Studio is an open hardware facilitation company based in Shenzhen, China. <br>
+Benefiting from local manufacture power and convenient global logistic system, <br>
+we integrate resources to serve new era of innovation. Seeed also works with <br>
+global distributors and partners to push open hardware movement.<br>
+
+
+[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/Grove_Haptic_Motor)](https://github.com/igrigorik/ga-beacon)
