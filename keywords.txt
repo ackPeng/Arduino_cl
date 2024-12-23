@@ -1,19 +1,23 @@
 #######################################
-# Syntax Coloring Map For Ultrasound
+# Syntax Coloring Map For WATER SENSOR
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
 
-ChainableLED	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-setColorRGB	KEYWORD2
-setColorHSB	KEYWORD2
+pins_init   KEYWORD2
+isExposedToWater    KEYWORD2
+soundAlarm  KEYWORD2
+#######################################
+# Instances (KEYWORD2)
+#######################################
 
 #######################################
 # Constants (LITERAL1)
 #######################################
+
