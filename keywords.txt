@@ -1,59 +1,45 @@
- #######################################
-# Syntax Coloring Map For Grove Current Sensor
+#######################################
+# Syntax Coloring Map For debug_lvc
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
-
-addressingMode	KEYWORD1
-SeeedOled	KEYWORD1
+Matrix_8x8  KEYWORD1
+orientation_type_t  KEYWORD1
+action_type_t   KEYWORD1
+blink_type_t    KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-
-init	KEYWORD1
-setNormalDisplay	KEYWORD1
-setInverseDisplay	KEYWORD1
-sendCommand	KEYWORD1
-setPageMode	KEYWORD1
-setHorizontalMode	KEYWORD1
-setTextXY	KEYWORD1
-clearDisplay	KEYWORD1
-setBrightness	KEYWORD1
-putChar	KEYWORD1
-putString	KEYWORD1
-putNumber	KEYWORD1
-putFloat	KEYWORD1
-drawBitmap	KEYWORD1
-chipErase	KEYWORD1
-setHorizontalScrollProperties	KEYWORD1
-activateScroll	KEYWORD1
-deactivateScroll	KEYWORD1
-
+init	KEYWORD2
+setBlinkRate	KEYWORD2
+setBrightness	KEYWORD2
+display 	KEYWORD2
+clear	KEYWORD2
+setDisplayOffset	KEYWORD2
+setDisplayOrientation	KEYWORD2
+writePixel	KEYWORD2
+writeBar	KEYWORD2
+writeIcon	KEYWORD2
+writeNumber	KEYWORD2
+writeString	KEYWORD2
+writeOnePicture KEYWORD2
+writePictures	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
-
-Scroll_Left	LITERAL1
-Scroll_Right	LITERAL1
-
-Scroll_2Frames	LITERAL1
-Scroll_3Frames	LITERAL1
-Scroll_4Frames	LITERAL1
-Scroll_5Frames	LITERAL1
-Scroll_25Frames	LITERAL1
-Scroll_64Frames	LITERAL1
-Scroll_128Frames	LITERAL1
-Scroll_256Frames	LITERAL1
-
-#######################################
-# Instances (KEYWORD2)
-#######################################
-
-SeeedOLED	KEYWORD2
-
-
+MAX_BIG_BUFFER_SIZE	LITERAL1
+HT16K33_DEFAULT_I2C_ADDR	LITERAL1
+DISPLAY_ROTATE_0	LITERAL1
+DISPLAY_ROTATE_90	LITERAL1
+DISPLAY_ROTATE_180	LITERAL1
+DISPLAY_ROTATE_270	LITERAL1
+ACTION_SCROLLING	LITERAL1
+ACTION_SHIFT	LITERAL1
+BLINK_OFF	LITERAL1
+BLINK_2HZ	LITERAL1
+BLINK_1HZ	LITERAL1
 
