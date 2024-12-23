@@ -1,28 +1,59 @@
-## Grove - 6-Axis Accelerometer&Gyroscope  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_6Axis_Accelerometer_And_Compass.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_6Axis_Accelerometer_And_Compass)
+ChainableLED  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_Chainable_RGB_LED.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_Chainable_RGB_LED)
+---------------
 
-<img src=https://statics3.seeedstudio.com/images/product/105020012%203.jpg width=300><img src=https://statics3.seeedstudio.com/product/105020012%203_02.jpg width=300>
+[Grove - Chainable RGB LED](https://www.seeedstudio.com/Grove-Chainable-RGB-LED-p-850.html)
+
+<img src=https://statics3.seeedstudio.com/images/product/chanbalelednb1.jpg width=300><img src=https://statics3.seeedstudio.com/product/chanbalelednb1_02.jpg width=300>
+
+[Grove – Chainable RGB Led V2.0](https://www.seeedstudio.com/Grove-%E2%80%93-Chainable-RGB-Led-V2.0-p-2903.html)
+
+<img src=https://statics3.seeedstudio.com/seeed/file/2017-07/bazaar501790_10402004845.jpg width=300><img src=https://statics3.seeedstudio.com/seeed/file/2017-07/bazaar501794_1040200484.jpg width=300>
 
 
-[Grove - 6-Axis Accelerometer&Gyroscope](https://www.seeedstudio.com/s/Grove-6-Axis-Accelerometer%26Gyroscope-p-2606.html)
+Arduino library compatible with Grove Chainable LED and the P9813 chip. It allows controlling a chain of LEDS individually. 
+Supports both RGB and HSB color spaces for setting the color of each individual LED.
 
-The Grove 6-Axis Accelerometer & Compass is a 3-axis accelerometer combined with a 3-axis magnetic sensor.  It is based on the sensor module LSM303DLH which has a selectable linear acceleration full scale range of ±2g / ±4g / ±8g and a selectable magnetic field full scale range of ±1.3 /±1.9 / ±2.5 / ±4.0 / ±4.7 / ±5.6 / ±8.1 gauss. Both the magnetic parts and the accelerometer parts can be powered down separately to reduce the power consumption. The Arduino can get these data via the I2C interface.
+For more information please visit [Seeed wiki](http://wiki.seeedstudio.com/Grove-Chainable_RGB_LED/) or [the author's Gitub](https://github.com/pjpmarques/ChainableLED).
 
-For more information, please refer to [wiki page][1]
-See also: [LSM303DLH Sensor Module Datasheet][2]
+### Usage:
+
+#### Installation
+
+- Install library from Arduino Library Manager
+
+    or
+
+- Download source code from GitHub.
+
+#### Library Interface
+
+```c++
+    class ChainableLED {
+      public:
+        ChainableLED(byte clk_pin, byte data_pin, byte number_of_leds);
+
+        void setColorRGB(byte led, byte red, byte green, byte blue);
+        void setColorHSB(byte led, float hue, float saturation, float brightness);
+    }
+```
+
+For more information, please refer to [author's wiki page](https://github.com/pjpmarques/ChainableLED/wiki) or [seeedstudio's wiki page](http://www.seeedstudio.com/wiki/Grove_-_Chainable_RGB_LED).
 
 ----
-This software is written by Frankie Chu for [Seeed Technology Inc.](http://www.seeed.cc) and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt/LICENSE for the details of MIT license.<br>
+
+This software is written by pjp.marques@gmail.com.
 
 Contributing to this software is warmly welcomed. You can do this basically by<br>
 [forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
 for operating guide). Adding change log and your contact into file header is encouraged.<br>
 Thanks for your contribution.
 
-Seeed is a hardware innovation platform for makers to grow inspirations into differentiating products. By working closely with technology providers of all scale, Seeed provides accessible technologies with quality, speed and supply chain knowledge. When prototypes are ready to iterate, Seeed helps productize 1 to 1,000 pcs using in-house engineering, supply chain management and agile manufacture forces. Seeed also team up with incubators, Chinese tech ecosystem, investors and distribution channels to portal Maker startups beyond.
+Seeed Studio is an open hardware facilitation company based in Shenzhen, China. <br>
+Benefiting from local manufacture power and convenient global logistic system, <br>
+we integrate resources to serve new era of innovation. Seeed also works with <br>
+global distributors and partners to push open hardware movement.<br>
 
 
-[1]:http://wiki.seeedstudio.com/Grove-6-Axis_AccelerometerAndGyroscope/
-[2]:https://raw.githubusercontent.com/SeeedDocument/Grove-6-Axis_AccelerometerAndGyroscope/master/res/LSM6DS3TR.pdf
+[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/Grove_Chainable_RGB_LED)](https://github.com/igrigorik/ga-beacon)
 
-[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/6Axis_Accelerometer_And_Compass)](https://github.com/igrigorik/ga-beacon)
 
