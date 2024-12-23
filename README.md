@@ -1,25 +1,29 @@
-Grove_Alcohol_Sensor  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_Alcohol_Sensor.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_Alcohol_Sensor)
----------------------------------------------------------
+Grove - I2C Touch Sensor
+------------------------
 
-[![image](http://www.seeedstudio.com/depot/bmz_cache/6/6d12ac0d0c0b70dd6f38c5a78cf833b7.image.530x397.jpg)](http://www.seeedstudio.com/depot/Grove-Alcohol-Sensor-p-764.html)
+This is an Arduino library for [Grove - I2C Touch Sensor](http://www.seeedstudio.com/depot/grove-i2c-touch-sensor-p-840.html?cPath=85_94)
 
-Alcohol sensor is semiconductor sensor for alcohol detection. It has good sensitivity and fast response to alcohol, suitable for portable alcohol detector.
+[![Grove - I2C Moto Driver](http://www.seeedstudio.com/depot/bmz_cache/f/f8dd81ece9e1b6cd1f37c8a245f4e5ba.image.114x85.jpg)](http://www.seeedstudio.com/depot/grove-i2c-touch-sensor-p-840.html?cPath=85_94)
 
-For more information, please refer to [wiki page](http://garden.seeedstudio.com/index.php?title=Twig_-_Alcohol_Sensor).
+For more information, please refer to [wiki page](http://www.seeedstudio.com/wiki/Grove_-_I2C_Touch_Sensor).
 
-    
 ----
 
-This software is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt/LICENSE for the details of MIT license.<br>
+This software is written by Seeed Studio<br>
+and is licensed under [The LGPL License V2.1](http://www.seeedstudio.com/wiki/Grove_-_I2C_Motor_Driver_V1.1). 
 
 Contributing to this software is warmly welcomed. You can do this basically by<br>
 [forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
 for operating guide). Adding change log and your contact into file header is encouraged.<br>
 Thanks for your contribution.
 
-Seeed is a hardware innovation platform for makers to grow inspirations into differentiating products. By working closely with technology providers of all scale, Seeed provides accessible technologies with quality, speed and supply chain knowledge. When prototypes are ready to iterate, Seeed helps productize 1 to 1,000 pcs using in-house engineering, supply chain management and agile manufacture forces. Seeed also team up with incubators, Chinese tech ecosystem, investors and distribution channels to portal Maker startups beyond.
+Seeed Studio is an open hardware facilitation company based in Shenzhen, China. <br>
+Benefiting from local manufacture power and convenient global logistic system, <br>
+we integrate resources to serve new era of innovation. Seeed also works with <br>
+global distributors and partners to push open hardware movement.<br>
 
 
 
 
-[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/Grove_Alcohol_Sensor)](https://github.com/igrigorik/ga-beacon)
+
+[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/Grove_I2C_Touch_Sensor)](https://github.com/igrigorik/ga-beacon)
