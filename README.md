@@ -1,29 +1,22 @@
-Grove - I2C Touch Sensor
-------------------------
+# Grove Gesture  [![Build Status](https://travis-ci.com/Seeed-Studio/Gesture_PAJ7620.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Gesture_PAJ7620)
 
-This is an Arduino library for [Grove - I2C Touch Sensor](http://www.seeedstudio.com/depot/grove-i2c-touch-sensor-p-840.html?cPath=85_94)
+<img src=https://statics3.seeedstudio.com/seeed/img/2016-08/5dxWtS1rxWLzukUaHBvGoIG9.jpg width=300><img src=https://statics3.seeedstudio.com/seeed/img/2016-08/3EmTCa2USbPnqZszQNngy8ss.jpg width=300>
 
-[![Grove - I2C Moto Driver](http://www.seeedstudio.com/depot/bmz_cache/f/f8dd81ece9e1b6cd1f37c8a245f4e5ba.image.114x85.jpg)](http://www.seeedstudio.com/depot/grove-i2c-touch-sensor-p-840.html?cPath=85_94)
+[Grove - Gesture（PAJ7620U2)](https://www.seeedstudio.com/s/Grove-Gesture（PAJ7620U2）-p-2463.html)
 
-For more information, please refer to [wiki page](http://www.seeedstudio.com/wiki/Grove_-_I2C_Touch_Sensor).
+**Description**
 
-----
+The sensor on Grove - Gesture is PAJ7620U2 that integrates gesture recognition function with general I2C interface into a single chip. It can recognize 9 gestures including move up, move down, move left, move right, etc with a simple swipe of your hand.
+For more information please visit the [wiki](http://wiki.seeedstudio.com/Grove-Gesture_v1.0/).
 
-This software is written by Seeed Studio<br>
-and is licensed under [The LGPL License V2.1](http://www.seeedstudio.com/wiki/Grove_-_I2C_Motor_Driver_V1.1). 
+
+---
+This software is written by Jack Wu for seeed studio<br>
+and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check LICENSE for more information.<br>
 
 Contributing to this software is warmly welcomed. You can do this basically by<br>
 [forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
 for operating guide). Adding change log and your contact into file header is encouraged.<br>
 Thanks for your contribution.
 
-Seeed Studio is an open hardware facilitation company based in Shenzhen, China. <br>
-Benefiting from local manufacture power and convenient global logistic system, <br>
-we integrate resources to serve new era of innovation. Seeed also works with <br>
-global distributors and partners to push open hardware movement.<br>
-
-
-
-
-
-[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/Grove_I2C_Touch_Sensor)](https://github.com/igrigorik/ga-beacon)
+Seeed is a hardware innovation platform for makers to grow inspirations into differentiating products. By working closely with technology providers of all scale, Seeed provides accessible technologies with quality, speed and supply chain knowledge. When prototypes are ready to iterate, Seeed helps productize 1 to 1,000 pcs using in-house engineering, supply chain management and agile manufacture forces. Seeed also team up with incubators, Chinese tech ecosystem, investors and distribution channels to portal Maker startups beyond.
