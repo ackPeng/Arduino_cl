@@ -27,7 +27,7 @@ jobs:
       - name: Create a depend.list file
         run: |
           # eg: echo "<repo>" >> depend.list
-         
+          echo "adafruit/Adafruit_MPR121" >> depend.list
 
 
           
