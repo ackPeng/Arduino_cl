@@ -1,11 +1,9 @@
-/*
-    Copyright (c) 2023 seeed technology inc.
-    Website    : www.seeed.cc
-    Author     : JX.Weng
-    Modified Time: June 2023
-    Description: Get the pag7660 recognition result in thumb mode.
-
+/**
     The MIT License (MIT)
+
+    Author: Hongtai Liu (lht856@foxmail.com)
+
+    Copyright (C) 2019  Seeed Technology Co.,Ltd.
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -26,34 +24,20 @@
     THE SOFTWARE.
 */
 
-#include "Gesture.h"
+#ifndef __SEEED_GROVE_MP3__
+#define __SEEED_GROVE_MP3__
 
-#define PAG7660_CS D3
-pag7660 Gesture(GESTURE_THUMB_MODE); // Thumb mode is used
+#include "KT403A_Player.h"
+#include "WT2003S_Player.h"
+#include "WT2605C_Player.h"
 
-void setup() {
-    Serial.begin(9600);
-    while(!Serial) {
-        delay(100);
+template <class T>
+class MP3Player {
+  public:
+    MP3Player() {
+        controller = new T();
     }
-    Serial.println("\nPAG7660 TEST DEMO: Gesture thumb mode.");
+    T* controller;
+};
 
-    // initialize with a SPI chip select pin number to use SPI
-    if(Gesture.init(PAG7660_CS)) {
-        Serial.println("PAG7660 initialization success");
-    } else {
-        Serial.println("PAG7660 initialization failed");
-    }
-    Serial.println("Please input your gestures:\n");
-}
-
-void loop() {
-    pag7660_gesture_t result;
-    if (Gesture.getResult(result)) {
-        if (result.thumb.up)
-            Serial.println("Thumb Up");
-        else if (result.thumb.down)
-            Serial.println("Thumb Down");
-        }
-    delay(100);
-}
+#endif
