@@ -48,35 +48,35 @@ void loop() {
     else if(input.startsWith("m")) {
       if(input.substring(1) == "1"){
         ShowSerial.println("1");
-        int err = Mp3Player.playMode(0x00);
+        int err = Mp3Player.playMode(CYCLE);
         ShowSerial.println(err);
         if(!err) ShowSerial.println("The playback mode is set to Loop mode.");
         else ShowSerial.println("ERROR");
       }
       else if(input.substring(1) == "2"){
         ShowSerial.println("2");
-        int err = Mp3Player.playMode(0x01);
+        int err = Mp3Player.playMode(SINGLE_CYCLE);
         ShowSerial.println(err);
         if(!err) ShowSerial.println("The playback mode is set to Single song loop mode.");
         else ShowSerial.println("ERROR");
       }
       else if(input.substring(1) == "3"){
         ShowSerial.println("3");
-        int err = Mp3Player.playMode(0x02);
+        int err = Mp3Player.playMode(DIR_CYCLE);
         ShowSerial.println(err);
         if(!err) ShowSerial.println("The playback mode is set to Folder loop mode.");
         else ShowSerial.println("ERROR");
       }
       else if(input.substring(1) == "4"){
         ShowSerial.println("4");
-        int err = Mp3Player.playMode(0x03);
+        int err = Mp3Player.playMode(RANDOM);
         ShowSerial.println(err);
         if(!err) ShowSerial.println("The playback mode is set to Random mode.");
         else ShowSerial.println("ERROR");
       }
       else if(input.substring(1) == "5"){
         ShowSerial.println("5");
-        int err = Mp3Player.playMode(0x04);
+        int err = Mp3Player.playMode(SINGLE_SHOT);
         ShowSerial.println(err);
         if(!err) ShowSerial.println("The playback mode is set to Single song mode.");
         else ShowSerial.println("ERROR");
