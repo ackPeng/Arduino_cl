@@ -24,7 +24,7 @@
     THE SOFTWARE.
 */
 #include "WT2605C_Player.h"
-#include <String.h>
+#include <string.h>
 
 template <class T>
 WT2605C<T>::WT2605C() {
