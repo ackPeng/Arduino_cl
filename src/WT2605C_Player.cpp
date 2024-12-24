@@ -403,11 +403,19 @@ uint8_t WT2605C<T>::cutInPlay(WT2605C_STORAGE device, uint32_t index) {
 //     commandBytes[5] = 0xff & len;
 //     sendCommand(6, (uint8_t*)data, len + 4);
 // }
-#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+
+
+#if defined(ARDUINO_SAMD_VARIANT_COMPLIANCE) || defined(NRF52840_XXAA)
 template class WT2605C<Uart>;
 #endif
 template class WT2605C<HardwareSerial>;
 
-
+#ifdef __AVR__
 #include <SoftwareSerial.h>
 template class WT2605C<SoftwareSerial>;
+#endif
+
+#if defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350) || defined(ARDUINO_XIAO_RA4M1) 
+#include <SoftwareSerial.h>
+template class WT2605C<SoftwareSerial>;
+#endif

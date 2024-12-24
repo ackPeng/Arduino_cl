@@ -591,11 +591,18 @@ void WT2003S<T>::getSPIFLashMp3Data(char* data, uint16_t address, uint16_t len) 
     commandBytes[5] = 0xff & len;
     sendCommand(6, (uint8_t*)data, len + 4);
 }
-#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+
+#if defined(ARDUINO_SAMD_VARIANT_COMPLIANCE) || defined(NRF52840_XXAA)
 template class WT2003S<Uart>;
 #endif
 template class WT2003S<HardwareSerial>;
 
-
+#ifdef __AVR__
 #include <SoftwareSerial.h>
 template class WT2003S<SoftwareSerial>;
+#endif
+
+#if defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350) || defined(ARDUINO_XIAO_RA4M1) 
+#include <SoftwareSerial.h>
+template class WT2003S<SoftwareSerial>;
+#endif
