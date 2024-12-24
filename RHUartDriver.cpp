@@ -112,7 +112,7 @@ void RHUartDriver<T>::burstWrite(uint8_t reg, uint8_t* src, uint8_t len) {
 }
 
 
-#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+#if defined(ARDUINO_SAMD_VARIANT_COMPLIANCE) || defined(NRF52840_XXAA)
     template class RHUartDriver<Uart>;
 #endif
 template class RHUartDriver<HardwareSerial>;

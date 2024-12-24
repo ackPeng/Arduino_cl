@@ -335,7 +335,7 @@ void RH_RF95<T>::setPreambleLength(uint16_t bytes) {
     this->write(RH_RF95_REG_21_PREAMBLE_LSB, bytes & 0xff);
 }
 
-#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+#if defined(ARDUINO_SAMD_VARIANT_COMPLIANCE) || defined(NRF52840_XXAA)
     template class RH_RF95<Uart>;
 #endif
 template class RH_RF95<HardwareSerial>;

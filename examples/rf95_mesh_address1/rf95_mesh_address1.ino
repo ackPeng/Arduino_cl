@@ -16,7 +16,14 @@
     RH_RF95<SoftwareSerial> driver(COMSerial);
 #endif
 
-#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+
+
+#ifdef SEEED_XIAO_M0
+    #define COMSerial Serial1
+    #define ShowSerial Serial
+
+    RH_RF95<Uart> driver(COMSerial);
+#elif defined(ARDUINO_SAMD_VARIANT_COMPLIANCE)
     #define COMSerial Serial1
     #define ShowSerial SerialUSB
 
@@ -30,6 +37,12 @@
     RH_RF95<HardwareSerial> driver(COMSerial);
 #endif
 
+#if defined(NRF52840_XXAA) || defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350)
+    #define COMSerial Serial1
+    #define ShowSerial Serial
+
+    RH_RF95<Uart> driver(COMSerial);
+#endif
 
 #include <RHMesh.h>
 
