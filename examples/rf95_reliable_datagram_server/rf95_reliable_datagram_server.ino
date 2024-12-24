@@ -64,9 +64,9 @@
 #define SERVER_ADDRESS 2
 
 
-// Singleton instance of the radio driver
-SoftwareSerial ss(10, 11);
-RH_RF95 driver(ss);
+// // Singleton instance of the radio driver
+// SoftwareSerial ss(10, 11);
+// RH_RF95 driver(ss);
 
 // Class to manage message delivery and receipt, using the driver declared above
 RHReliableDatagram manager(driver, SERVER_ADDRESS);
