@@ -16,6 +16,23 @@
     RH_RF95<SoftwareSerial> driver(COMSerial);
 #endif
 
+#if defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350) ||  defined(ARDUINO_XIAO_RA4M1)
+    #include <SoftwareSerial.h>
+    SoftwareSerial SSerial(D7, D6); // RX, TX
+    #define COMSerial SSerial
+    #define ShowSerial Serial
+
+    RH_RF95<SoftwareSerial> driver(COMSerial);
+#endif
+
+#if defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350) 
+    #include <SoftwareSerial.h>
+    SoftwareSerial SSerial(D7, D6); // RX, TX
+    #define COMSerial SSerial
+    #define ShowSerial Serial
+
+    RH_RF95<SoftwareSerial> driver(COMSerial);
+#endif
 
 
 #ifdef SEEED_XIAO_M0
@@ -37,7 +54,7 @@
     RH_RF95<HardwareSerial> driver(COMSerial);
 #endif
 
-#if defined(NRF52840_XXAA) || defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350)
+#if defined(NRF52840_XXAA)
     #define COMSerial Serial1
     #define ShowSerial Serial
 

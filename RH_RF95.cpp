@@ -344,3 +344,8 @@ template class RH_RF95<HardwareSerial>;
     #include <SoftwareSerial.h>
     template class RH_RF95<SoftwareSerial>;
 #endif
+
+#if defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350) || defined(ARDUINO_XIAO_RA4M1)
+    #include <SoftwareSerial.h>
+    template class RH_RF95<SoftwareSerial>;
+#endif
