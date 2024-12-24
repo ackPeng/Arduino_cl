@@ -27,8 +27,7 @@ jobs:
       - name: Create a depend.list file
         run: |
           # eg: echo "<repo>" >> depend.list
-          echo "Francis-Magallanes/CircularQueue" >> depend.list
-          echo "plerup/espsoftwareserial" >> depend.list
+
           
 
           

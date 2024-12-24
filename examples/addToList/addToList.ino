@@ -1,11 +1,12 @@
 /*
-    RHUartDriver.h
-    A library for Grove - Lora 433MHz/470MHz RF or Grove - Lora 868MHz/915MHz RF
+    addToList.ino
+    Example sketch for MusicShield 2.0
 
-    Copyright (c) 2015 seeed technology inc.
+    Copyright (c) 2012 seeed technology inc.
     Website    : www.seeed.cc
-    Author     : JY.W
-    Modified Time: 2016-07-15
+    Author     : Jack Shao (jacky.shaoxg@gmail.com)
+    Create Time: Mar 2014
+    Change Log :
 
     The MIT License (MIT)
 
@@ -28,52 +29,19 @@
     THE SOFTWARE.
 */
 
-#ifndef _RH_UART_Driver_H_
-#define _RH_UART_Driver_H_
 
+#include <SD.h>
+#include <SPI.h>
+#include <arduino.h>
+#include <MusicPlayer.h>
 
-#include <Arduino.h>
-#include <RHGenericDriver.h>
+void setup(void) {
+    Serial.begin(9600);
+    player.begin();  //will initialize the hardware and set default mode to be normal.
+    player.addToPlaylist("test.mp3");
+    player.addToPlaylist("test.wma");
+}
+void loop(void) {
+    player.play();  //do some leisurely job
+}
 
-
-#define DEFAULT_TIMEOUT 3
-
-#define RH_WRITE_MASK 0x80
-
-template<typename T>
-class RHUartDriver : public RHGenericDriver {
-  public:
-
-    RHUartDriver(T& ss);
-
-    virtual bool init();
-
-    uint8_t uartAvailable(void);
-
-    uint8_t uartRead(void);
-
-    // 'W' + 'Reg' + 'Len' + 'Data'
-    void uartTx(uint8_t reg, uint8_t* src, uint8_t len);
-
-    // 'R' + 'Reg' + 'Len'
-    void uartRx(uint8_t reg, uint8_t* dest, uint8_t len);
-
-    uint8_t read(uint8_t reg);
-
-    void write(uint8_t reg, uint8_t val);
-
-    void burstRead(uint8_t reg, uint8_t* dest, uint8_t len);
-
-    void burstWrite(uint8_t reg, uint8_t* src, uint8_t len);
-
-  protected:
-
-    T& _ss;
-
-  private:
-
-
-
-};
-
-#endif
