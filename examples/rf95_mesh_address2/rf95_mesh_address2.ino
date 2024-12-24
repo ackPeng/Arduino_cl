@@ -1,12 +1,11 @@
-// rf95_mesh_address1.pde
+// rf95_mesh_address2.pde
 // -*- mode: C++ -*-
-// Example sketch showing how to create a simple addressed, routed reliable messaging client
+// Example sketch showing how to create a simple addressed, routed reliable messaging server
 // with the RHMesh class.
 // It is designed to work with the other examples rf95_mesh_address*
 // Hint: you can simulate other network topologies by setting the
 // RH_TEST_NETWORK define in RHRouter.h
-#include "RH_RF95.h"
-
+#include <RH_RF95.h>
 #ifdef __AVR__  
     #include <SoftwareSerial.h>
     SoftwareSerial SSerial(10, 11); // RX, TX
@@ -53,7 +52,7 @@
 
 
 
-#include "RHMesh.h"
+#include <RHMesh.h>
 
 // Mesh has much greater memory requirements, and you may need to limit the
 // max message length to prevent wierd crashes
@@ -67,7 +66,7 @@
 
 
 // Class to manage message delivery and receipt, using the driver declared above
-RHMesh manager(driver, MESH1_ADDRESS);
+RHMesh manager(driver, MESH2_ADDRESS);
 
 void setup() {
     ShowSerial.begin(9600);
@@ -78,7 +77,7 @@ void setup() {
 }
 
 uint8_t data[] = "Hello World!";
-uint8_t back[] = "And hello back to you from mesh 1";
+uint8_t back[] = "And hello back to you from mesh 2";
 // Dont put this on the stack:
 uint8_t buf[RH_MESH_MAX_MESSAGE_LEN];
 
