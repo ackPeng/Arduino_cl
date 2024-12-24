@@ -41,7 +41,7 @@
     #define COMSerial SSerial
     #define ShowSerial Serial
     //MP3Player<WT2003S<SoftwareSerial>> Mp3Player;
-    MP3Player<KT403A<SoftwareSerial>> Mp3Player;
+    KT403A<SoftwareSerial> Mp3Player;
 #endif
 
 #if defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350) ||  defined(ARDUINO_XIAO_RA4M1) 
@@ -49,8 +49,7 @@
     SoftwareSerial SSerial(D7, D6); // RX, TX
     #define COMSerial SSerial
     #define ShowSerial Serial
-
-    MP3Player<KT403A<SoftwareSerial>> Mp3Player;
+    KT403A<SoftwareSerial> Mp3Player;
 #endif
 
 
@@ -58,7 +57,7 @@
     #define COMSerial Serial1
     #define ShowSerial Serial
 
-    MP3Player<KT403A<HardwareSerial>> Mp3Player;
+    KT403A<HardwareSerial> Mp3Player;
 #endif
 
 
@@ -66,12 +65,11 @@
     #define COMSerial Serial1
     #define ShowSerial Serial
 
-    MP3Player<KT403A<Uart>> Mp3Player;
+    KT403A<Uart> Mp3Player;
 #elif defined(ARDUINO_SAMD_VARIANT_COMPLIANCE)
     #define COMSerial Serial1
     #define ShowSerial SerialUSB
-
-    MP3Player<KT403A<Uart>> Mp3Player;
+    KT403A<Uart> Mp3Player;
 #endif
 
 
@@ -79,7 +77,7 @@
     #define COMSerial Serial
     #define ShowSerial SerialUSB
     //MP3Player<WT2003S<HardwareSerial>> Mp3Player;
-    MP3Player<KT403A<HardwareSerial>> Mp3Player;
+    KT403A<HardwareSerial> Mp3Player;
 #endif
 
 
@@ -90,7 +88,7 @@
     #define COMSerial Serial1
     #define ShowSerial Serial
 
-    MP3Player<KT403A<Uart>> Mp3Player;
+    KT403A<Uart> Mp3Player;
 #endif
 
 static uint8_t recv_cmd[8] = {};

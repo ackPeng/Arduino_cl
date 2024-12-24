@@ -6,7 +6,7 @@
     #define COMSerial SSerial
     #define ShowSerial Serial
     //MP3Player<WT2003S<SoftwareSerial>> Mp3Player;
-    MP3Player<KT403A<SoftwareSerial>> Mp3Player;
+  WT2605C<SoftwareSerial> Mp3Player;
 #endif
 
 #if defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350) ||  defined(ARDUINO_XIAO_RA4M1) 
@@ -15,15 +15,15 @@
     #define COMSerial SSerial
     #define ShowSerial Serial
 
-    MP3Player<KT403A<SoftwareSerial>> Mp3Player;
+  WT2605C<SoftwareSerial> Mp3Player;
 #endif
 
 
 #if  defined(CONFIG_IDF_TARGET_ESP32C3) || defined(CONFIG_IDF_TARGET_ESP32C6) || defined(CONFIG_IDF_TARGET_ESP32S3)
     #define COMSerial Serial1
     #define ShowSerial Serial
+    WT2605C<HardwareSerial> Mp3Player;
 
-    MP3Player<KT403A<HardwareSerial>> Mp3Player;
 #endif
 
 
@@ -31,12 +31,12 @@
     #define COMSerial Serial1
     #define ShowSerial Serial
 
-    MP3Player<KT403A<Uart>> Mp3Player;
+    WT2605C<Uart> Mp3Player;
 #elif defined(ARDUINO_SAMD_VARIANT_COMPLIANCE)
     #define COMSerial Serial1
     #define ShowSerial SerialUSB
+    WT2605C<Uart> Mp3Player;
 
-    MP3Player<KT403A<Uart>> Mp3Player;
 #endif
 
 
@@ -44,7 +44,7 @@
     #define COMSerial Serial
     #define ShowSerial SerialUSB
     //MP3Player<WT2003S<HardwareSerial>> Mp3Player;
-    MP3Player<KT403A<HardwareSerial>> Mp3Player;
+    WT2605C<HardwareSerial> Mp3Player;
 #endif
 
 
@@ -55,7 +55,7 @@
     #define COMSerial Serial1
     #define ShowSerial Serial
 
-    MP3Player<KT403A<Uart>> Mp3Player;
+    WT2605C<Uart> Mp3Player;
 #endif
 
 
