@@ -1,14 +1,9 @@
-/*
-    addToList.ino
-    Example sketch for MusicShield 2.0
-
-    Copyright (c) 2012 seeed technology inc.
-    Website    : www.seeed.cc
-    Author     : Jack Shao (jacky.shaoxg@gmail.com)
-    Create Time: Mar 2014
-    Change Log :
-
+/**
     The MIT License (MIT)
+
+    Author: Hongtai Liu (lht856@foxmail.com)
+
+    Copyright (C) 2019  Seeed Technology Co.,Ltd.
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -29,19 +24,20 @@
     THE SOFTWARE.
 */
 
+#ifndef __SEEED_GROVE_MP3__
+#define __SEEED_GROVE_MP3__
 
-#include <SD.h>
-#include <SPI.h>
-#include <Arduino.h>
-#include <MusicPlayer.h>
+#include "KT403A_Player.h"
+#include "WT2003S_Player.h"
+#include "WT2605C_Player.h"
 
-void setup(void) {
-    Serial.begin(9600);
-    player.begin();  //will initialize the hardware and set default mode to be normal.
-    player.addToPlaylist("test.mp3");
-    player.addToPlaylist("test.wma");
-}
-void loop(void) {
-    player.play();  //do some leisurely job
-}
+template <class T>
+class MP3Player {
+  public:
+    MP3Player() {
+        controller = new T();
+    }
+    T* controller;
+};
 
+#endif
