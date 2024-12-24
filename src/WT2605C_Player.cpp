@@ -25,6 +25,7 @@
 */
 #include "WT2605C_Player.h"
 #include <string.h>
+#include <WString.h>
 
 template <class T>
 WT2605C<T>::WT2605C() {
