@@ -4,7 +4,7 @@
 // with the RHRouter class.
 // It is designed to work with the other examples rf95_router_address*
 
-#include <SoftwareSerial.h>
+// #include <SoftwareSerial.h>
 #include <RHRouter.h>
 #include <RH_RF95.h>
 
