@@ -123,7 +123,7 @@ template class RHUartDriver<HardwareSerial>;
 #endif
 
 
-#if defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350) || defined(ARDUINO_XIAO_RA4M1)
+#if defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350) || defined(ARDUINO_XIAO_RA4M1) || defined(CONFIG_IDF_TARGET_ESP32C3) || defined(CONFIG_IDF_TARGET_ESP32C6) || defined(CONFIG_IDF_TARGET_ESP32S3) 
     #include <SoftwareSerial.h>
     template class RHUartDriver<SoftwareSerial>;
 #endif

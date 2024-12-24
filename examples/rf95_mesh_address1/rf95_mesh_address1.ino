@@ -16,7 +16,7 @@
     RH_RF95<SoftwareSerial> driver(COMSerial);
 #endif
 
-#if defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350) ||  defined(ARDUINO_XIAO_RA4M1)
+#if defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350) ||  defined(ARDUINO_XIAO_RA4M1) || defined(CONFIG_IDF_TARGET_ESP32C3) || defined(CONFIG_IDF_TARGET_ESP32C6) || defined(CONFIG_IDF_TARGET_ESP32S3) 
     #include <SoftwareSerial.h>
     SoftwareSerial SSerial(D7, D6); // RX, TX
     #define COMSerial SSerial
@@ -49,6 +49,13 @@
     #define ShowSerial Serial
 
     RH_RF95<Uart> driver(COMSerial);
+#endif
+
+#if defined(CONFIG_IDF_TARGET_ESP32C3)
+    #define COMSerial Serial1
+    #define ShowSerial Serial
+
+    RH_RF95<HardwareSerial> driver(COMSerial);
 #endif
 
 #include "RHMesh.h"
