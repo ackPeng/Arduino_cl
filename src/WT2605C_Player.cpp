@@ -46,11 +46,11 @@ void WT2605C<T>::init(T& serialPort, uint8_t pin) {
 template <class T>
 String WT2605C<T>::getStorageName(WT2605C_STORAGE storage) {
     switch (storage) {
-        case SPIFLASH:
+        case WT2605C_SPIFLASH:
             return STORAGE_SPIFLASH;
-        case SD:
+        case WT2605C_SD:
             return STORAGE_SD;
-        case UDISK:
+        case WT2605C_UDISK:
             return STORAGE_UDISK;
         default:
             return "";
