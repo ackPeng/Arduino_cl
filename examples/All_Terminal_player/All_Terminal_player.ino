@@ -23,9 +23,9 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
 */
-#include "SeeedGroveMP3.h"
-#include "KT403A_Player.h"
-#include "WT2003S_Player.h"
+#include <SeeedGroveMP3.h>
+#include <KT403A_Player.h>
+#include <WT2003S_Player.h>
 
 
 #ifdef __AVR__
