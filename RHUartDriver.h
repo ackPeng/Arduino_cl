@@ -1,9 +1,13 @@
-/**
+/*
+    RHUartDriver.h
+    A library for Grove - Lora 433MHz/470MHz RF or Grove - Lora 868MHz/915MHz RF
+
+    Copyright (c) 2015 seeed technology inc.
+    Website    : www.seeed.cc
+    Author     : JY.W
+    Modified Time: 2016-07-15
+
     The MIT License (MIT)
-
-    Author: Hongtai Liu (lht856@foxmail.com)
-
-    Copyright (C) 2019  Seeed Technology Co.,Ltd.
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -24,20 +28,52 @@
     THE SOFTWARE.
 */
 
-#ifndef __SEEED_GROVE_MP3__
-#define __SEEED_GROVE_MP3__
+#ifndef _RH_UART_Driver_H_
+#define _RH_UART_Driver_H_
 
-#include "KT403A_Player.h"
-#include "WT2003S_Player.h"
-#include "WT2605C_Player.h"
 
-template <class T>
-class MP3Player {
+#include <Arduino.h>
+#include <RHGenericDriver.h>
+
+
+#define DEFAULT_TIMEOUT 3
+
+#define RH_WRITE_MASK 0x80
+
+template<typename T>
+class RHUartDriver : public RHGenericDriver {
   public:
-    MP3Player() {
-        controller = new T();
-    }
-    T* controller;
+
+    RHUartDriver(T& ss);
+
+    virtual bool init();
+
+    uint8_t uartAvailable(void);
+
+    uint8_t uartRead(void);
+
+    // 'W' + 'Reg' + 'Len' + 'Data'
+    void uartTx(uint8_t reg, uint8_t* src, uint8_t len);
+
+    // 'R' + 'Reg' + 'Len'
+    void uartRx(uint8_t reg, uint8_t* dest, uint8_t len);
+
+    uint8_t read(uint8_t reg);
+
+    void write(uint8_t reg, uint8_t val);
+
+    void burstRead(uint8_t reg, uint8_t* dest, uint8_t len);
+
+    void burstWrite(uint8_t reg, uint8_t* src, uint8_t len);
+
+  protected:
+
+    T& _ss;
+
+  private:
+
+
+
 };
 
 #endif
