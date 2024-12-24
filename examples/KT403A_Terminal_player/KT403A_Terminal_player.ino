@@ -99,7 +99,11 @@ void setup() {
     ShowSerial.begin(9600);
     COMSerial.begin(9600);
     while (!ShowSerial);
+    #if defined(ARDUINO_XIAO_RA4M1) 
+    delay(2000);
+    #else
     while (!COMSerial);
+    #endif
     Mp3Player.init(COMSerial);
     printMenu();
 }
