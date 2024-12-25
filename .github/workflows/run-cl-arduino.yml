@@ -30,7 +30,9 @@ jobs:
             echo "lvgl/lv_arduino" >> depend.list
             echo "Bodmer/TFT_eSPI" >> depend.list
             echo "arduino-libraries/SD" >> depend.list
+            echo "tanakamasayuki/I2C_BM8563" >> depend.list
           
+
 
 
 
