@@ -2,6 +2,8 @@
 #ifndef __PN532_SPI_H__
 #define __PN532_SPI_H__
 
+#ifndef ARDUINO_XIAO_RA4M1
+
 #include <SPI.h>
 #include "PN532/PN532/PN532Interface.h"
 
@@ -40,5 +42,6 @@ class PN532_SPI : public PN532Interface {
         return _spi->transfer(0);
     };
 };
+#endif
 
 #endif

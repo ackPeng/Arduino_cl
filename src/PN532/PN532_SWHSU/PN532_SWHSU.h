@@ -1,6 +1,7 @@
 
 #ifndef __PN532_SWHSU_H__
 #define __PN532_SWHSU_H__
+#ifndef ESP32
 
 #include <SoftwareSerial.h>
 
@@ -29,4 +30,5 @@ class PN532_SWHSU : public PN532Interface {
     int8_t receive(uint8_t* buf, int len, uint16_t timeout = PN532_SWHSU_READ_TIMEOUT);
 };
 
+#endif
 #endif

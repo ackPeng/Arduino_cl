@@ -1,4 +1,6 @@
 
+#ifndef ARDUINO_XIAO_RA4M1
+
 #include "PN532/PN532_SPI/PN532_SPI.h"
 #include "PN532/PN532/PN532_debug.h"
 #include "Arduino.h"
@@ -214,3 +216,5 @@ int8_t PN532_SPI::readAckFrame() {
 
     return memcmp(ackBuf, PN532_ACK, sizeof(PN532_ACK));
 }
+
+#endif

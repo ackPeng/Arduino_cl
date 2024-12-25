@@ -1,3 +1,5 @@
+#ifndef ESP32
+
 
 #include "PN532/PN532_SWHSU/PN532_SWHSU.h"
 #include "PN532/PN532/PN532_debug.h"
@@ -187,3 +189,6 @@ int8_t PN532_SWHSU::receive(uint8_t* buf, int len, uint16_t timeout) {
     }
     return read_bytes;
 }
+
+
+#endif
