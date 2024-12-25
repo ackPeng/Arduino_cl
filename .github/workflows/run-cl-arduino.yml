@@ -28,7 +28,11 @@ jobs:
         run: |
           # eg: echo "<repo>" >> depend.list
             echo "lvgl/lv_arduino" >> depend.list
+            echo "Bodmer/TFT_eSPI" >> depend.list
+            echo "arduino-libraries/SD" >> depend.list
           
+
+
 
           
 
