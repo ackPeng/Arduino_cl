@@ -27,7 +27,7 @@ jobs:
       - name: Create a depend.list file
         run: |
           # eg: echo "<repo>" >> depend.list
-          echo "tanakamasayuki/Arduino_TensorFlowLite_ESP32" >> depend.list
+          echo "tensorflow/tflite-micro-arduino-examples" >> depend.list
 
 
       - name: Create a ignore.list file
