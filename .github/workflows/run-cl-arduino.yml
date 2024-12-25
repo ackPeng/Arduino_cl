@@ -28,7 +28,9 @@ jobs:
         run: |
           # eg: echo "<repo>" >> depend.list
           # echo "tensorflow/tflite-micro-arduino-examples" >> depend.list
-          echo "adafruit/Adafruit_TFLite_Micro_Speech" >> depend.list
+          # echo "adafruit/Adafruit_TFLite_Micro_Speech" >> depend.list
+            echo "tanakamasayuki/Arduino_TensorFlowLite_ESP32" >> depend.list
+          
           
 
 
