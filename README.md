@@ -1,29 +1,31 @@
-# Digital_Infrared_Temperature_Sensor_MLX90615  [![Build Status](https://travis-ci.com/AsharaStudios/Digital_Infrared_Temperature_Sensor_MLX90615.svg?branch=master)](https://travis-ci.com/AsharaStudios/Digital_Infrared_Temperature_Sensor_MLX90615)
+# Seeed Arduino KCT202  [![Build Status](https://travis-ci.com/Seeed-Studio/Seeed_Arduino_KCT202.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Seeed_Arduino_KCT202)
 
-<img src=https://statics3.seeedstudio.com/images/product/101020077%201.jpg width=400> <img src=https://statics3.seeedstudio.com/product/101020077%201_01.jpg width=400>
+## Introduction
+The KCT202 is a integrated fingerprint,which based on BYD's fingerprint sensor BF5325 and a cortex M4 MCU GD32FFPRTG
 
-[Grove - Digital Infrared Temperature Sensor](https://www.seeedstudio.com/Grove-Digital-Infrared-Temperature-Sensor-p-2385.html)
 
-This Grove - Digital Infrared Temperature Sensor is baseed on MLX90615 which is a high resolution infra Red thermometer for noncontact temperature measurements,readout resolution is 0.02 Celcius.Factory calibrated in wide temperature range: -40 ~ 85 cilcius for sensor temperarure and -40 ~ 115 cilcius for object temperature.The thermometer is factory calibrated with the digital SMBus compatible interface enabled,but the our Arduino/Seeeduino library is based on a soft i2c library,you can use any pins on any AVR chip to drive the SDA and SCL lines.
+## Notice
+* Since atmega328(like arduino UNO) has only one serial port,The library use hardware serial port to output log info,and control the fingerprint sensor via softserial(2,3)，So the grove cable should attach to (D2,D3) port. The log serial's baudrate default 115200,The transport serial's baudrate fixed 57600.   
 
-More detail refer to [seeed wiki](http://wiki.seeedstudio.com/Grove-Digital_Infrared_Temperature_Sensor/)
 
-## Usage
+* When using the samd board(like arduino zero,seeeduino cortex M0+),the SerialUSB for printing log info.The Serial(defined in library)for send AT command.  
 
-1. Clone this repo or download as a zip;
-2. Unzip the zip file if you downloaded a zip file;
-3. Copy the directory "Digital_Infrared_Temperature_Sensor_MLX90615" into Arduino's libraries directory;
-4. Open Arduino IDE, go to "File"->"Examples"->"Digital_Infrared_Temperature_Sensor_MLX90615"
 
-----
 
-This software is written for [Seeed Technology Inc.](http://www.seeed.cc) and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt/LICENSE for the details of MIT license.
+***
+This software is written by downey  for seeed studio<br>
+Email:baozhu.zuo@gmail.com
+and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt for more information.<br>
 
-Contributing to this software is warmly welcomed. You can do this basically by
-[forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above
-for operating guide). Adding change log and your contact into file header is encouraged.
+Contributing to this software is warmly welcomed. You can do this basically by<br>
+[forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
+for operating guide). Adding change log and your contact into file header is encouraged.<br>
 Thanks for your contribution.
 
-Seeed is a hardware innovation platform for makers to grow inspirations into differentiating products. By working closely with technology providers of all scale, Seeed provides accessible technologies with quality, speed and supply chain knowledge. When prototypes are ready to iterate, Seeed helps productize 1 to 1,000 pcs using in-house engineering, supply chain management and agile manufacture forces. Seeed also team up with incubators, Chinese tech ecosystem, investors and distribution channels to portal Maker startups beyond.
+Seeed Studio is an open hardware facilitation company based in Shenzhen, China. <br>
+Benefiting from local manufacture power and convenient global logistic system, <br>
+we integrate resources to serve new era of innovation. Seeed also works with <br>
+global distributors and partners to push open hardware movement.<br>
 
-[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/Digital_Infrared_Temperature_Sensor_MLX90615)](https://github.com/igrigorik/ga-beacon)
+
+
