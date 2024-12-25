@@ -27,7 +27,7 @@ jobs:
       - name: Create a depend.list file
         run: |
           # eg: echo "<repo>" >> depend.list
-
+          echo "tanakamasayuki/Arduino_TensorFlowLite_ESP32" >> depend.list
 
 
       - name: Create a ignore.list file
@@ -40,6 +40,19 @@ jobs:
           echo "LowLevelExample,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
           echo "Pedometer,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
 
+          echo "FreeFallDetect,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+          echo "HighLevelExample,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+          echo "IMU_Capture,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+          echo "IMU_Classifier,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+          echo "LowLevelExample,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+          echo "Pedometer,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+
+          echo "FreeFallDetect,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+          echo "HighLevelExample,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+          echo "IMU_Capture,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+          echo "IMU_Classifier,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+          echo "LowLevelExample,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+          echo "Pedometer,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
 
       - name: Build sketch
         run: ./ci/tools/compile.sh
