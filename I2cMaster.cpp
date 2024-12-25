@@ -295,5 +295,5 @@ bool TwiMaster::write(uint8_t data) {
 }
 
 #else
-#error unknown CPU
+// #error unknown CPU
 #endif

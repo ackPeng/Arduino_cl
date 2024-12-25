@@ -138,7 +138,7 @@ class TwiMaster : public I2cMasterBase {
     uint8_t addressRW_ = 0;
 
     #else
-#error unknown CPU
+// #error unknown CPU
     #endif
 };
 #endif  // I2C_MASTER_H
