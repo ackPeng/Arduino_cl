@@ -30,19 +30,12 @@ jobs:
 
 
 
-
-
-
-
-
-          
-
-          
-
-
       - name: Create a ignore.list file
         run: |
           # eg: echo "<path>,<fqbn>" >> ignore.list
+          # echo "P2P_Receive,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          # echo "P2P_Send,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "P2P_Receive_LCD,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
 
 
       - name: Build sketch
