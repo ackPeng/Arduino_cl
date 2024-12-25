@@ -27,14 +27,7 @@ jobs:
       - name: Create a depend.list file
         run: |
           # eg: echo "<repo>" >> depend.list
-            echo "lvgl/lv_arduino" >> depend.list
-            echo "Bodmer/TFT_eSPI" >> depend.list
-            echo "arduino-libraries/SD" >> depend.list
-            echo "tanakamasayuki/I2C_BM8563" >> depend.list
-            echo "moononournation/Arduino_GFX" >> depend.list
-            echo "bitbank2/AnimatedGIF" >> depend.list
-            echo "lvgl/lv_demos" >> depend.list
-          
+
 
 
 
