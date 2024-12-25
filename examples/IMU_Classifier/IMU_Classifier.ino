@@ -1,7 +1,9 @@
 #include <LSM6DS3.h>
 #include <Wire.h>
 
-#include <TensorFlowLite.h>
+// #include <TensorFlowLite.h>
+#include <TensorFlowLite_ESP32.h>
+
 #include <tensorflow/lite/micro/all_ops_resolver.h>
 #include <tensorflow/lite/micro/micro_error_reporter.h>
 #include <tensorflow/lite/micro/micro_interpreter.h>
