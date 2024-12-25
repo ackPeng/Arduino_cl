@@ -26,9 +26,9 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
 */
-#include "ATSerial.h"
-#include "Protocol.h"
-#include "KCT202.h"
+#include <ATSerial.h>
+#include <Protocol.h>
+#include <KCT202.h>
 
 
 #if defined(ARDUINO_ARCH_AVR)
