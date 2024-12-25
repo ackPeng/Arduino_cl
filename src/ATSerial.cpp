@@ -325,8 +325,15 @@ void ATSerial<T, T1>::printHexArray(uint8_t* data, uint32_t data_len) {
     //template class ATSerial<HardwareSerial,Serial_>;
     template class ATSerial<Uart, Serial_>;
 #elif defined(ARDUINO_ARCH_ESP32)
+    #if defined(CONFIG_IDF_TARGET_ESP32C3) ||  defined(CONFIG_IDF_TARGET_ESP32C6) ||  defined(CONFIG_IDF_TARGET_ESP32S3)
+    template class ATSerial<HardwareSerial,HWCDC>;
+    #else
     template class ATSerial<HardwareSerial,HardwareSerial>;
     //template class ATSerial<Uart, Serial_>;
+    #endif
+
+#elif defined(NRF52840_XXAA)
+    template class ATSerial<SoftwareSerial,Adafruit_USBD_CDC>;
 #else
     template class ATSerial<SoftwareSerial, HardwareSerial>;
 #endif

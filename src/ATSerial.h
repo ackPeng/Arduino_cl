@@ -53,7 +53,11 @@
 #elif defined(ARDUINO_ARCH_SAMD)
     #define SAMD21
     #define UART_MAX_LEN   1024
+    #if defined(SEEED_XIAO_M0)
+    #define debug Serial
+    #else
     #define debug SerialUSB
+    #endif
     #define DEBUG_EN 1
 #elif defined(ARDUINO_ARCH_STM32F4)
     #define UART_MAX_LEN   1024
