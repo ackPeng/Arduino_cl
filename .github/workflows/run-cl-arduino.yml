@@ -29,9 +29,16 @@ jobs:
           # eg: echo "<repo>" >> depend.list
 
 
+
       - name: Create a ignore.list file
         run: |
           # eg: echo "<path>,<fqbn>" >> ignore.list
+          echo "FreeFallDetect,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "HighLevelExample,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "IMU_Capture,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "IMU_Classifier,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "LowLevelExample,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "Pedometer,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
 
 
       - name: Build sketch
