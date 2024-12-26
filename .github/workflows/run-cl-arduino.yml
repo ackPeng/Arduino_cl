@@ -27,35 +27,12 @@ jobs:
       - name: Create a depend.list file
         run: |
           # eg: echo "<repo>" >> depend.list
-          # echo "TheNitek/NDEF" >> depend.list
-          # echo "miguelbalboa/rfid" >> depend.list
-          echo "OSSLibraries/Arduino_MFRC522v2" >> depend.list
-          echo "don/NDEF" >> depend.list
+
           
         
       - name: Create a ignore.list file
         run: |
           # eg: echo "<path>,<fqbn>" >> ignore.list
-          # echo "FeliCa_card_detection,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
-          # echo "FeliCa_card_read,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
-          # echo "p2p_raw,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
-          # echo "p2p_with_ndef_library,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
-
-          # echo "FeliCa_card_detection,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
-          # echo "FeliCa_card_read,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
-          # echo "emulate_tag_ndef,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
-          # echo "ntag21x_protect,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
-          # echo "ntag21x_rw,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
-          # echo "p2p_raw,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
-          # echo "p2p_with_ndef_library,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
-
-          # echo "FeliCa_card_detection,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
-          # echo "FeliCa_card_read,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
-          # echo "emulate_tag_ndef,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
-          # echo "ntag21x_protect,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
-          # echo "ntag21x_rw,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
-          # echo "p2p_raw,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
-          # echo "p2p_with_ndef_library,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
 
 
 
