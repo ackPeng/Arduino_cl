@@ -293,7 +293,7 @@ bool TwiMaster::write(uint8_t data) {
     twi_writeTo(addressRW_, &data, 1, true);
 }
 
-#elif defined(ARDUINO_XIAO_RA4M1) || defined(NRF52840_XXAA) || defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350) || defined(CONFIG_IDF_TARGET_ESP32S3) || defined(CONFIG_IDF_TARGET_ESP32C3) || defined(CONFIG_IDF_TARGET_ESP32C6)
+#elif defined(SEEED_XIAO_M0) ||defined(ARDUINO_XIAO_RA4M1) || defined(NRF52840_XXAA) || defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350) || defined(CONFIG_IDF_TARGET_ESP32S3) || defined(CONFIG_IDF_TARGET_ESP32C3) || defined(CONFIG_IDF_TARGET_ESP32C6)
 
 #else
 #error unknown CPU
