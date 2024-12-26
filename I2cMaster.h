@@ -133,10 +133,11 @@ class TwiMaster : public I2cMasterBase {
     uint8_t status_;
     void execCmd(uint8_t cmdReg);
 
-    #elif defined(ARDUINO_ARCH_ESP8266) || defined(ARDUINO_ARCH_ESP32) || defined(NRF52840_XXAA) || defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350) || defined(SEEED_XIAO_M0)
-
+    #elif defined(ARDUINO_ARCH_ESP8266) 
     uint8_t addressRW_ = 0;
 
+    #elif defined(ARDUINO_XIAO_RA4M1) || defined(NRF52840_XXAA) || defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350) || defined(CONFIG_IDF_TARGET_ESP32S3) || defined(CONFIG_IDF_TARGET_ESP32C3) || defined(CONFIG_IDF_TARGET_ESP32C6)
+    #define INCLUDED_I2C
     #else
 #error unknown CPU
     #endif

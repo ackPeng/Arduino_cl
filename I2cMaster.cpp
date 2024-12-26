@@ -230,8 +230,7 @@ bool TwiMaster::write(uint8_t data) {
     return status() == TWSR_MTX_DATA_ACK;
 }
 
-#elif defined(ARDUINO_ARCH_ESP8266) || defined(ARDUINO_ARCH_ESP32) || defined(NRF52840_XXAA) || defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350) || defined(SEEED_XIAO_M0)
-
+#elif defined(ARDUINO_ARCH_ESP8266) 
 #include <twi.h>
 //------------------------------------------------------------------------------
 /**
@@ -293,6 +292,8 @@ void TwiMaster::stop(void) {
 bool TwiMaster::write(uint8_t data) {
     twi_writeTo(addressRW_, &data, 1, true);
 }
+
+#elif defined(ARDUINO_XIAO_RA4M1) || defined(NRF52840_XXAA) || defined(ARDUINO_ARCH_RP2040) || defined(ARDUINO_ARCH_RP2350) || defined(CONFIG_IDF_TARGET_ESP32S3) || defined(CONFIG_IDF_TARGET_ESP32C3) || defined(CONFIG_IDF_TARGET_ESP32C6)
 
 #else
 #error unknown CPU
