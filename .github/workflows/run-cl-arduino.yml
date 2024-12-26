@@ -27,40 +27,51 @@ jobs:
       - name: Create a depend.list file
         run: |
           # eg: echo "<repo>" >> depend.list
-          #  echo "tensorflow/tflite-micro-arduino-examples" >> depend.list
-          # echo "adafruit/Adafruit_TFLite_Micro_Speech" >> depend.list
-          #  echo "tanakamasayuki/Arduino_TensorFlowLite_ESP32" >> depend.list
-          #  echo "feilipu/Arduino_FreeRTOS_Library" >> depend.list
-          #  echo "tensorflow/tflite-micro" >> depend.list
-           
+          # echo "TheNitek/NDEF" >> depend.list
+          # echo "miguelbalboa/rfid" >> depend.list
+          echo "OSSLibraries/Arduino_MFRC522v2" >> depend.list
+          echo "don/NDEF" >> depend.list
           
-          
-
-
-
+        
       - name: Create a ignore.list file
         run: |
           # eg: echo "<path>,<fqbn>" >> ignore.list
-          echo "FreeFallDetect,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
-          echo "HighLevelExample,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
-          echo "IMU_Capture,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
-          echo "IMU_Classifier,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
-          echo "LowLevelExample,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
-          echo "Pedometer,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "FeliCa_card_detection,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "FeliCa_card_read,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "p2p_raw,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "p2p_with_ndef_library,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
 
-          echo "FreeFallDetect,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
-          echo "HighLevelExample,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
-          echo "IMU_Capture,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
-          echo "IMU_Classifier,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
-          echo "LowLevelExample,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
-          echo "Pedometer,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+          echo "FeliCa_card_detection,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+          echo "FeliCa_card_read,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+          echo "emulate_tag_ndef,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+          echo "ntag21x_protect,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+          echo "ntag21x_rw,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+          echo "p2p_raw,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+          echo "p2p_with_ndef_library,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
 
-          echo "FreeFallDetect,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
-          echo "HighLevelExample,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
-          echo "IMU_Capture,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
-          echo "IMU_Classifier,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
-          echo "LowLevelExample,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
-          echo "Pedometer,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+          echo "FeliCa_card_detection,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+          echo "FeliCa_card_read,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+          echo "emulate_tag_ndef,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+          echo "ntag21x_protect,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+          echo "ntag21x_rw,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+          echo "p2p_raw,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+          echo "p2p_with_ndef_library,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+
+          # echo "emulate_tag_ndef,esp32:esp32:XIAO_ESP32C3" >> ignore.list
+          # echo "ntag21x_protect,esp32:esp32:XIAO_ESP32C3" >> ignore.list
+          # echo "ntag21x_rw,esp32:esp32:XIAO_ESP32C3" >> ignore.list
+          # echo "p2p_with_ndef_library,esp32:esp32:XIAO_ESP32C3" >> ignore.list
+
+          # echo "emulate_tag_ndef,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+          # echo "ntag21x_protect,esp32:esp32:XIAO_ESP32C6seeed_xiao_rp2350" >> ignore.list
+          # echo "ntag21x_rw,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+          # echo "p2p_with_ndef_library,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+
+          # echo "emulate_tag_ndef,esp32:esp32:XIAO_ESP32S3" >> ignore.list
+          # echo "ntag21x_protect,esp32:esp32:XIAO_ESP32S33" >> ignore.list
+          # echo "ntag21x_rw,esp32:esp32:XIAO_ESP32S3" >> ignore.list
+          # echo "p2p_with_ndef_library,esp32:esp32:XIAO_ESP32S3" >> ignore.list
+
 
       - name: Build sketch
         run: ./ci/tools/compile.sh
