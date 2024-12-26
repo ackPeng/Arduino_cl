@@ -1,6 +1,12 @@
 #include "emulatetag.h"
 #include "NdefMessage.h"
 
+#ifdef NRF52840_XXAA
+#ifdef USE_TINYUSB
+#include <Adafruit_TinyUSB.h>
+#endif
+#endif
+
 #if 0
 #define NFC_INTERFACE_SPI
 #include <SPI.h>
