@@ -34,6 +34,36 @@ jobs:
       - name: Create a ignore.list file
         run: |
           # eg: echo "<path>,<fqbn>" >> ignore.list
+          echo "send_Blink_ROS,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list
+          echo "send_Blink_ROS,Seeeduino:nrf52:xiaonRF52840" >> ignore.list
+          echo "send_Blink_ROS,Seeeduino:nrf52:xiaonRF52840Sense" >> ignore.list
+          echo "send_Blink_ROS,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "send_Blink_ROS,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+          echo "send_Blink_ROS,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+          echo "send_Blink_ROS,esp32:esp32:XIAO_ESP32C3" >> ignore.list
+          echo "send_Blink_ROS,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+          echo "send_Blink_ROS,esp32:esp32:XIAO_ESP32S3" >> ignore.list
+
+          echo "receive_sleep,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list
+          echo "receive_sleep,Seeeduino:nrf52:xiaonRF52840" >> ignore.list
+          echo "receive_sleep,Seeeduino:nrf52:xiaonRF52840Sense" >> ignore.list
+          echo "receive_sleep,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "receive_sleep,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+          echo "receive_sleep,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+          echo "receive_sleep,esp32:esp32:XIAO_ESP32C3" >> ignore.list
+          echo "receive_sleep,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+          echo "receive_sleep,esp32:esp32:XIAO_ESP32S3" >> ignore.list
+
+
+          echo "send_sleep,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list
+          echo "send_sleep,Seeeduino:nrf52:xiaonRF52840" >> ignore.list
+          echo "send_sleep,Seeeduino:nrf52:xiaonRF52840Sense" >> ignore.list
+          echo "send_sleep,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "send_sleep,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+          echo "send_sleep,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+          echo "send_sleep,esp32:esp32:XIAO_ESP32C3" >> ignore.list
+          echo "send_sleep,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+          echo "send_sleep,esp32:esp32:XIAO_ESP32S3" >> ignore.list
 
 
 

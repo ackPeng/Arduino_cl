@@ -16,11 +16,7 @@
 
 #include <SPI.h>
 #include "mcp2515_can.h"
-#ifdef __AVR__
 #include <avr/sleep.h>
-#else
-#include <sleep.h>
-#endif
 
 // the cs pin of the version after v1.1 is default to D9
 // v0.9b and v1.0 is default D10
