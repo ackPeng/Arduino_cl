@@ -27,7 +27,8 @@ jobs:
       - name: Create a depend.list file
         run: |
           # eg: echo "<repo>" >> depend.list
-
+            echo "arduino-libraries/SD" >> depend.list
+            echo "frankjoshua/rosserial_arduino_lib" >> depend.list
           
         
       - name: Create a ignore.list file
