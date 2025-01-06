@@ -1,5 +1,5 @@
 #include <lvgl.h>
-#include "../lvgl/demos/lv_demos.h"
+#include <demos/lv_demo.h>
 // uncomment a library for display driver
 #define USE_TFT_ESPI_LIBRARY
 // #define USE_ARDUINO_GFX_LIBRARY
