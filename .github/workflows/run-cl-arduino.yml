@@ -28,7 +28,7 @@ jobs:
         run: |
           # eg: echo "<repo>" >> depend.list
           # echo "lvgl/lvgl" >> depend.list
-          echo "lvgl/lv_demos" >> depend.list
+          # echo "lvgl/lv_demos" >> depend.list
           echo "Bodmer/TFT_eSPI" >> depend.list
           echo "moononournation/Arduino_GFX" >> depend.list
           echo "tanakamasayuki/I2C_BM8563" >> depend.list
@@ -59,6 +59,12 @@ jobs:
           git clone --depth 1 https://github.com/lvgl/lvgl /home/runner/Arduino/libraries/lvgl
           cp -r /home/runner/Arduino/libraries/lvgl/lv_conf_template.h /home/runner/Arduino/libraries/lv_conf.h
           sed -i 's/#if 0/#if 1/' /home/runner/Arduino/libraries/lv_conf.h
+
+          git clone --depth 1 https://github.com/lvgl/lv_demos.git /home/runner/Arduino/libraries/lv_demos
+          cp -r /home/runner/Arduino/libraries/lv_demos/lv_demo_conf_template.h /home/runner/Arduino/libraries/lv_demo_conf.h
+          sed -i 's/#if 0/#if 1/' /home/runner/Arduino/libraries/lv_demo_conf.h
+          
+
 
       - name: Build sketch
         run: |
