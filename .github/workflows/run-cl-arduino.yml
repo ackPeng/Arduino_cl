@@ -45,6 +45,9 @@ jobs:
           echo "HardwareTest,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list   
           echo "TFT_Clock,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list
 
+          # XIAO_RA4M1 RAM and flash is too small
+          echo "TFT_eSPI_GifPlayer,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+
           # TFT_eSPI not support XIAO_ESP32C6
           echo "HardwareTest,esp32:esp32:XIAO_ESP32C6" >> ignore.list
           echo "LvglBenchmark,esp32:esp32:XIAO_ESP32C6" >> ignore.list
@@ -60,9 +63,9 @@ jobs:
           cp -r /home/runner/Arduino/libraries/lvgl/lv_conf_template.h /home/runner/Arduino/libraries/lv_conf.h
           sed -i 's/#if 0/#if 1/' /home/runner/Arduino/libraries/lv_conf.h
 
-          git clone --depth 1 https://github.com/lvgl/lv_demos.git /home/runner/Arduino/libraries/lv_demos
-          cp -r /home/runner/Arduino/libraries/lv_demos/lv_demo_conf_template.h /home/runner/Arduino/libraries/lv_demo_conf.h
-          sed -i 's/#if 0/#if 1/' /home/runner/Arduino/libraries/lv_demo_conf.h
+          # git clone --depth 1 https://github.com/lvgl/lv_demos.git /home/runner/Arduino/libraries/lv_demos
+          # cp -r /home/runner/Arduino/libraries/lv_demos/lv_demo_conf_template.h /home/runner/Arduino/libraries/lv_demo_conf.h
+          # sed -i 's/#if 0/#if 1/' /home/runner/Arduino/libraries/lv_demo_conf.h
           
 
 
