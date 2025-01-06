@@ -40,6 +40,15 @@ jobs:
       - name: Create a ignore.list file
         run: |
           # eg: echo "<path>,<fqbn>" >> ignore.list
+          echo "HardwareTest,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list   
+          echo "TFT_Clock,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list
+
+          echo "HardwareTest,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+          echo "LvglBenchmark,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+          echo "TFT_Clock,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+          echo "TFT_eSPI_Clock,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+          echo "TFT_eSPI_GifPlayer,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+
 
       - name: Install lvgl
         run: |
