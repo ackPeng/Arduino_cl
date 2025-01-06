@@ -28,7 +28,6 @@ jobs:
         run: |
           # eg: echo "<repo>" >> depend.list
           echo "lvgl/lvgl" >> depend.list
-          cp -r /home/runner/Arduino/libraries/lvgl/lv_conf_template.h /home/runner/Arduino/libraries/lv_conf.h
           # echo "lvgl/lv_demos" >> depend.list
           echo "Bodmer/TFT_eSPI" >> depend.list
           echo "moononournation/Arduino_GFX" >> depend.list
@@ -36,7 +35,9 @@ jobs:
           echo "arduino-libraries/SD" >> depend.list
           echo "bitbank2/AnimatedGIF" >> depend.list
 
-          
+      - name: cp lvgl config file
+        run: cp -r /home/runner/Arduino/libraries/lvgl/lv_conf_template.h /home/runner/Arduino/libraries/lv_conf.h
+
       - name: Create a ignore.list file
         run: |
           # eg: echo "<path>,<fqbn>" >> ignore.list
