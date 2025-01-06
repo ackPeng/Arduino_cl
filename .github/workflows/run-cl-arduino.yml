@@ -64,7 +64,8 @@ jobs:
           cp -r /home/runner/Arduino/libraries/lvgl/lv_conf_template.h /home/runner/Arduino/libraries/lv_conf.h
           sed -i 's/#if 0/#if 1/' /home/runner/Arduino/libraries/lv_conf.h
           sed -i 's/#define LV_USE_DEMO_WIDGETS 0/#define LV_USE_DEMO_WIDGETS 1/' /home/runner/Arduino/libraries/lv_conf.h
-          cp -rf /home/runner/Arduino/libraries/lvgl/demos /home/runner/Arduino/libraries/lvgl/src/
+          
+          ln -s /home/runner/Arduino/libraries/lvgl/demos /home/runner/Arduino/libraries/lvgl/src/demos
 
 
           
