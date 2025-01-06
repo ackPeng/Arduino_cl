@@ -35,8 +35,7 @@ jobs:
           echo "arduino-libraries/SD" >> depend.list
           echo "bitbank2/AnimatedGIF" >> depend.list
 
-      - name: cp lvgl config file
-        run: cp -r /home/runner/Arduino/libraries/lvgl/lv_conf_template.h /home/runner/Arduino/libraries/lv_conf.h
+
 
       - name: Create a ignore.list file
         run: |
@@ -45,7 +44,9 @@ jobs:
 
 
       - name: Build sketch
-        run: ./ci/tools/compile.sh
+        run:
+          cp -r /home/runner/Arduino/libraries/lvgl/lv_conf_template.h /home/runner/Arduino/libraries/lv_conf.h
+          ./ci/tools/compile.sh
 
       - name: Build result
         run: |
