@@ -43,10 +43,10 @@ jobs:
 
       - name: Install lvgl
         run: |
-        mkdir -p /home/runner/Arduino/libraries/
-        git clone --depth 1 https://github.com/lvgl/lvgl /home/runner/Arduino/libraries/lvgl
-        cp -r /home/runner/Arduino/libraries/lvgl/lv_conf_template.h /home/runner/Arduino/libraries/lv_conf.h
-        
+          mkdir -p /home/runner/Arduino/libraries
+          git clone --depth 1 https://github.com/lvgl/lvgl /home/runner/Arduino/libraries/lvgl
+          cp -r /home/runner/Arduino/libraries/lvgl/lv_conf_template.h /home/runner/Arduino/libraries/lv_conf.h
+
 
       - name: Build sketch
         run: |
