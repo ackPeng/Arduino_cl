@@ -28,7 +28,7 @@ jobs:
         run: |
           # eg: echo "<repo>" >> depend.list
           echo "lvgl/lvgl" >> depend.list
-          cp -r lvgl/lv_conf_template.h lv_conf.h
+          cp -r /home/runner/Arduino/libraries/lvgl/lv_conf_template.h /home/runner/Arduino/libraries/lv_conf.h
           # echo "lvgl/lv_demos" >> depend.list
           echo "Bodmer/TFT_eSPI" >> depend.list
           echo "moononournation/Arduino_GFX" >> depend.list
