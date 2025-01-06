@@ -27,10 +27,15 @@ jobs:
       - name: Create a depend.list file
         run: |
           # eg: echo "<repo>" >> depend.list
-          echo "OSSLibraries/Arduino_MFRC522v2" >> depend.list
-          echo "don/NDEF" >> depend.list
+          echo "lvgl/lvgl" >> depend.list
+          echo "lvgl/lv_demos" >> depend.list
+          echo "Bodmer/TFT_eSPI" >> depend.list
+          echo "moononournation/Arduino_GFX" >> depend.list
+          echo "tanakamasayuki/I2C_BM8563" >> depend.list
+          echo "arduino-libraries/SD" >> depend.list
+          echo "bitbank2/AnimatedGIF" >> depend.list
+
           
-        
       - name: Create a ignore.list file
         run: |
           # eg: echo "<path>,<fqbn>" >> ignore.list
