@@ -1,4 +1,5 @@
 #include <vector>
+#include <string>
 #include <TFT_eSPI.h>
 #include <SPI.h>
 #include <SD.h>
