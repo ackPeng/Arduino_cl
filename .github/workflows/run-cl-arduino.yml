@@ -28,7 +28,7 @@ jobs:
         run: |
           # eg: echo "<repo>" >> depend.list
           # echo "lvgl/lvgl" >> depend.list
-          # echo "lvgl/lv_demos" >> depend.list
+          echo "lvgl/lv_demos" >> depend.list
           echo "Bodmer/TFT_eSPI" >> depend.list
           echo "moononournation/Arduino_GFX" >> depend.list
           echo "tanakamasayuki/I2C_BM8563" >> depend.list
@@ -40,9 +40,12 @@ jobs:
       - name: Create a ignore.list file
         run: |
           # eg: echo "<path>,<fqbn>" >> ignore.list
+
+          # seeed_XIAO_m0 RAM and flash is too small
           echo "HardwareTest,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list   
           echo "TFT_Clock,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list
 
+          # TFT_eSPI not support XIAO_ESP32C6
           echo "HardwareTest,esp32:esp32:XIAO_ESP32C6" >> ignore.list
           echo "LvglBenchmark,esp32:esp32:XIAO_ESP32C6" >> ignore.list
           echo "TFT_Clock,esp32:esp32:XIAO_ESP32C6" >> ignore.list

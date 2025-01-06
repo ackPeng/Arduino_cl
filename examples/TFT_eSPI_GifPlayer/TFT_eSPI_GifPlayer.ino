@@ -215,7 +215,7 @@ int getGifInventory( const char* basePath )
 
   while( file ) {
     if(!file.isDirectory()) {
-      GifFiles.push_back( file.name() );
+      GifFiles.push_back(std::string(file.name()));
       amount++;
       tft.drawString(String(amount), textPosX, textPosY );
       file.close();
