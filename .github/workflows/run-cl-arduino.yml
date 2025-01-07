@@ -58,7 +58,8 @@ jobs:
           echo "TFT_eSPI_Clock,esp32:esp32:XIAO_ESP32C6" >> ignore.list
           echo "TFT_eSPI_GifPlayer,esp32:esp32:XIAO_ESP32C6" >> ignore.list
 
-
+          # AnimatedGIF not support XIAO_RP2040
+          echo "TFT_eSPI_GifPlayer,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
 
       - name: Install lvgl
         run: |
