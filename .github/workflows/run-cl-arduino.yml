@@ -43,9 +43,12 @@ jobs:
 
           # seeed_XIAO_m0 RAM and flash is too small
           echo "HardwareTest,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list   
+          echo "LvglBenchmark,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list  
           echo "TFT_Clock,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list
 
           # XIAO_RA4M1 RAM and flash is too small
+          echo "HardwareTest,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "LvglBenchmark,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
           echo "TFT_eSPI_GifPlayer,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
 
           # TFT_eSPI not support XIAO_ESP32C6

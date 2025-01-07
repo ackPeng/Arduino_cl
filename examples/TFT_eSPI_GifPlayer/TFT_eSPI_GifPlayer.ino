@@ -4,6 +4,9 @@
 #include <SPI.h>
 #include <SD.h>
 
+#ifdef ARDUINO_ARCH_RP2350
+#undef PICO_BUILD
+#endif
 #include "AnimatedGIF.h"
 
 AnimatedGIF gif;
