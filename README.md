@@ -1,23 +1,26 @@
-# Seeed Studio Round Display for XIAO
-## Introduction 
+# Seeed-Arduino-LCD  [![Build Status](https://travis-ci.com/Seeed-Studio/Seeed_Arduino_LCD.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Seeed_Arduino_LCD)
 
-An Arduino graphics library based on LVGL, specifically designed for [Seeed Studio Round Display for XIAO](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html). Wiki for this product can be found [here](https://wiki.seeedstudio.com/using_lvgl_and_tft_on_round_display/).
+### Introduction
 
-## Depends
+This library fork form [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI). It is used to drive LCD screen.
 
-    lvgl, lv_examples, TFT_eSPI, GFX Library for Arduino, I2C BM8563 RTC, SD, AnimatedGIF
+### Start
+You need to configure User_Setup.h to make your board work with LCD.
+For example, if you use the LCD screen of ILI9341, then you uncomment #define ILI9341_DRIVER to make it support.
+And you need to specify the pins of the connection. Here is the default configuration。
+##### SAMD21
+ TFT   | PIN
+ :-:   | :-:
+ TFT_CS |  5 
+ TFT_DC |  6  
+ TFT_RST | -1  
+ 
+ You can change pin definitions according to your needs.
+ 
 
-## Usage
+### Boards
+ We recommend using it on internal flash chips larger than 128k. If you have a smaller flash device, I recommend using the [TFT_Touch_Shield_V2](https://github.com/Seeed-Studio/TFT_Touch_Shield_V2).
 
-    1.Git clone this resp to your Arduino IDE's libraries directory.
-    2.Install all the dependencies from the Arduino Library Manager.
-    3.Uncomment a library for display driver.
-    4.Run the demo "HardTest" on examples directory.
+### Note
+  You can get more information [here](https://github.com/Bodmer/TFT_eSPI). 
 
-## Note
-
-Please install the dependencies from the Arduino Library Manager. 
-
-If you want to use the TFT_eSPI library for display driving, you must comment out the line `#include <User_Setup.h>` and uncomment the line  `#include <User_Setups/Setup66_Seeed_XIAO_RoundDisplay.h> ` in the "User_Setup_Select.h" file.
-
-The lvgl configuration file `lv_conf.h`  must be copied to  your Arduino IDE's libraries directory.
