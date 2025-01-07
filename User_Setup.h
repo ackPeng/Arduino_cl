@@ -193,14 +193,14 @@
 //
 // ##################################################################################
 
-// #define TOUCH
+#define TOUCH
 
 //for four wire touch
-//#define FOURWIRETOUCH
-//#define YP A2   // must be an analog pin, use "An" notation!
-//#define XM A1   // must be an analog pin, use "An" notation!
-//#define XP A3   // can be a digital pin,
-
+#define FOURWIRETOUCH
+#define YP A2   // must be an analog pin, use "An" notation!
+#define XM A1   // must be an analog pin, use "An" notation!
+#define XP A3   // can be a digital pin,
+#define YM A0   
 //for adx
 
 // #define XPT2046TOUCH
@@ -232,7 +232,7 @@
 
 // Comment out the #define below to stop the SPIFFS filing system and smooth font code being loaded
 // this will save ~20kbytes of FLASH
-//#define SMOOTH_FONT
+// #define SMOOTH_FONT
 
 // ##################################################################################
 //

@@ -35,6 +35,29 @@ jobs:
         run: |
           # eg: echo "<path>,<fqbn>" >> ignore.list
 
+          # no Seeed_FS.h so can't compile
+          echo "SmoothFonts,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list
+          echo "SmoothFonts,Seeeduino:nrf52:xiaonRF52840" >> ignore.list
+          echo "SmoothFonts,Seeeduino:nrf52:xiaonRF52840Sense" >> ignore.list
+          echo "SmoothFonts,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "SmoothFonts,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+          echo "SmoothFonts,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+          echo "SmoothFonts,esp32:esp32:XIAO_ESP32C3" >> ignore.list
+          echo "SmoothFonts,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+          echo "SmoothFonts,esp32:esp32:XIAO_ESP32S3" >> ignore.list
+
+          echo "480x320/Touch_Controller_Demo,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list
+          echo "480x320/Touch_Controller_Demo,Seeeduino:nrf52:xiaonRF52840" >> ignore.list
+          echo "480x320/Touch_Controller_Demo,Seeeduino:nrf52:xiaonRF52840Sense" >> ignore.list
+          echo "480x320/Touch_Controller_Demo,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "480x320/Touch_Controller_Demo,rp2040:rp2040:seeed_xiao_rp2040" >> ignore.list
+          echo "480x320/Touch_Controller_Demo,rp2040:rp2040:seeed_xiao_rp2350" >> ignore.list
+          echo "480x320/Touch_Controller_Demo,esp32:esp32:XIAO_ESP32C3" >> ignore.list
+          echo "480x320/Touch_Controller_Demo,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+          echo "480x320/Touch_Controller_Demo,esp32:esp32:XIAO_ESP32S3" >> ignore.list
+
+
+
 
       - name: Build sketch
         run: |
