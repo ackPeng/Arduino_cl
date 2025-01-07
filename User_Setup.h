@@ -197,10 +197,15 @@
 
 //for four wire touch
 #define FOURWIRETOUCH
-#define YP A2   // must be an analog pin, use "An" notation!
-#define XM A1   // must be an analog pin, use "An" notation!
-#define XP A3   // can be a digital pin,
-#define YM A0   
+// #define YP A2   // must be an analog pin, use "An" notation!
+// #define XM A1   // must be an analog pin, use "An" notation!
+// #define XP A3   // can be a digital pin,
+// #define YM A0   
+
+#define YP D2   
+#define XM D1   
+#define XP D3  
+#define YM D0   
 //for adx
 
 // #define XPT2046TOUCH
