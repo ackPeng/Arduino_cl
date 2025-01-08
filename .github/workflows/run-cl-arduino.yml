@@ -40,6 +40,13 @@ jobs:
           echo "320x240/Cellular_Automata,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list
           echo "480x320/Cellular_Automata,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list
 
+          # xiao m0 RAM is too small
+          echo "320x240/All_Free_Fonts_Demo,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "320x240/Cellular_Automata,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+          echo "480x320/Cellular_Automata,Seeeduino:renesas_uno:XIAO_RA4M1" >> ignore.list
+
+
+
 
           # no Seeed_FS.h so can't compile
           echo "SmoothFonts/Font_Demo_1,Seeeduino:samd:seeed_XIAO_m0" >> ignore.list
