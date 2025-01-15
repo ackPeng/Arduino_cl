@@ -1,26 +1,53 @@
-# Seeed-Arduino-LCD  [![Build Status](https://travis-ci.com/Seeed-Studio/Seeed_Arduino_LCD.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Seeed_Arduino_LCD)
+Seeed Arduino LSM6DS3  [![Build Status](https://travis-ci.com/Seeed-Studio/Accelerometer_And_Gyroscope_LSM6DS3.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Accelerometer_And_Gyroscope_LSM6DS3)
+---------------------------------
 
-### Introduction
+![](https://statics3.seeedstudio.com/images/product/105020012%203.jpg)
 
-This library fork form [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI). It is used to drive LCD screen.
+More detail refer to [wiki page](http://wiki.seeedstudio.com/Grove-6-Axis_AccelerometerAndGyroscope/) and [product page](https://www.seeedstudio.com/Grove-6-Axis-Accelerometer%26Gyroscope-p-2606.html)
 
-### Start
-You need to configure User_Setup.h to make your board work with LCD.
-For example, if you use the LCD screen of ILI9341, then you uncomment #define ILI9341_DRIVER to make it support.
-And you need to specify the pins of the connection. Here is the default configuration。
-##### SAMD21
- TFT   | PIN
- :-:   | :-:
- TFT_CS |  5 
- TFT_DC |  6  
- TFT_RST | -1  
- 
- You can change pin definitions according to your needs.
- 
+Example
+------
 
-### Boards
- We recommend using it on internal flash chips larger than 128k. If you have a smaller flash device, I recommend using the [TFT_Touch_Shield_V2](https://github.com/Seeed-Studio/TFT_Touch_Shield_V2).
+Example           | Feature
+----------------- | ----------------------------------------------------
+HighLevelExample  | Using class LSM6DS3
+LowLevelExample   | Using class LSM6DS3Core
+Pedometer         | A demo for making a pedometer 
+FreeFallDetect    | Detect object free falling, like a falling football
 
-### Note
-  You can get more information [here](https://github.com/Bodmer/TFT_eSPI). 
+
+API
+------
+
+Methods in class LSM6DS3   | Methods in class LSM6DS3Core
+-------------------------- | -------------
+readRawAccelX              | readRegisterRegion   
+readRawAccelY              | readRegister         
+readRawAccelZ              | readRegisterInt16  
+readRawGyroX               | writeRegister       
+readRawGyroY               | embeddedPage        
+readRawGyroZ               | *
+readFloatAccelX            | *
+readFloatAccelY            | *
+readFloatAccelZ            | *
+readFloatGyroX             | *
+readFloatGyroY             | *
+readFloatGyroZ             | *
+readRawTemp                | *
+readTempC                  | *
+readTempF                  | *
+calcGyro                   | *
+calcAccel                  | *
+
+----
+
+
+License Information
+-------------------
+
+This product is _**open source**_! 
+
+Please review the LICENSE.md file for license information. 
+
+
 
