@@ -1,71 +1,116 @@
-# Grove - LED Matrix Driver(HT16K33 with 8x8 LED Matrix)  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_LED_Matrix_Driver_HT16K33.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_LED_Matrix_Driver_HT16K33)
+# Disk91 - LoRaE5 library
+This Arduino Library is making LoRa-E5 development much simpler for developper
+LoRa-E5 is a LoRaWAN module make by Seeed studio.
 
-The HT16K33 is a memory mapping and multi-function LED controller driver. 
+## Installation
+- Download the Zip file from the github **releases** menu
+- In Arduino, go to sketch / include library / Add a library ZIP
+- Load the downloaded Zip file
+- Now you can import the library (Disk91 LoRaE5 library)
+- Watch the examples in Arduino / Files / Examples / Disk91 LoRa-E5 library   
 
-## How to use
+## Supported feature
+- LoRaE5 module detection over different Serial ports on WIO
+- LoRaWan configuration persistence
+- Uplink / Downlink
 
-Grove - LED Matrix Driver is an I2C device, just connect it to the I2C, and power it with 5V.
+## comming soon feature
+- Synchronous and Asynchronous use
+- Duty Cycle user management
 
-## Examples
+## Suported zones for Helium and TTN
+- EU868
+- US915
+- AS923_1/2/3/4
+- KR920
+- IN865
 
-### display_bar
+## Public API
+```C
+    Disk91_LoRaE5(
+        bool       nothing = false       // if anyone can explain me why w/o param the constructer generate compilation error ?!?
+    );
 
-This example shows the `bar mode`. There are 33 levels of the bar. It can be used to display distance, volume, or etc.
+    Disk91_LoRaE5(
+        uint16_t   atTimeoutMs,          // Default timeout in Ms for AT command execution
+        Serial_  * logSerial = NULL      // When set, the library debug is enabled               
+    );
 
-### display_icon
+    Disk91_LoRaE5(
+        Serial_  * logSerial = NULL      // When set, the library debug is enabled               
+    );
 
-This example shows the `icon mode`. There are 29 icons in our library, include some smile faces, arrows, shapes... If you want to make you own icons, please go to `display_custom_pictures`.
+    ~Disk91_LoRaE5();
 
-### display_number
+    bool begin(  
+        uint8_t portType = DSKLORAE5_HWSEARCH,    // where to find the LoRa-E5 board  
+        __HWSERIAL_T * hwSerial = NULL,           // for HWSERIAL_CUSTOM, link the associated Serial
+        SoftwareSerial * swSerial = NULL,         // for SWSERIAL_CUTSOM, link the associated SoftwareSerial
+        int16_t ssRxPort = -1,                    // for SWSERIAL_PINS, specify the RX & TX Pin, the SSerial will be initialized
+        int16_t ssTxPort = -1
+    );
 
-This example shows how to display a integer number. The display range of writeNumber() is int32_t (from -2147483648 to 2147483647).
+    bool setup(                     // Setup the LoRaWAN stack with the stored credentials
+        bool      selfDC = false,   // when true, the duty cycle management is not managed by the module but the user application
+        bool      withADR = false   // when true, the ADR is turned ON
+    );
 
-### display_string
+    bool setup(                     // Setup the LoRaWAN stack
+        uint8_t   zone,             // radio zone selection
+        uint8_t   deveui[],         // deviceEUI in the normal order for the bytes
+        uint8_t   appeui[],         // applicationEUI in the normal order for the bytes
+        uint8_t   appkey[],         // applicationKEY in the normal order for the bytes
+        bool      selfDC = false,   // when true, the duty cycle management is not managed by the module but the user application
+        bool      withADR = false   // when true, the ADR is turned ON
+    );
 
-This example shows how to display a string. The string size should be less than 48(if you want more, please change `MAX_BIG_BUFFER_SIZE` at the header file).
+    bool persistConfig(             // Store the LoRaWan configuration into module EEPROM for restoring later 
+                                    //   this allows to update WIO firmware without loosing the LoRaWan credentials
+            uint8_t   zone,         // radio zone selection
+            uint8_t   deveui[],     // deviceEUI in the normal order for the bytes
+            uint8_t   appeui[],     // applicationEUI in the normal order for the bytes
+            uint8_t   appkey[]      // applicationKEY in the normal order for the bytes
+    );
 
-### display_custom_pictures
+    bool haveStoredConfig();    // Returns true when a configuration has already been stored in the E5 memory
+    bool clearStoredConfig();   // Purge the stored configuration for E5
 
-This example shows how to make your own pictures and display them. Firstly, create uint64_t type 8x8 matrix picture at https://xantorohara.github.io/led-matrix-editor/# .
-Then copy the uint64_t array(on the right side of the page) to your arduino IDE and pass the array name to `writePictures()` or `writeOnePicture()`.
+    bool sendReceive_sync(      // send a message on LoRaWan expert an ack at least, eventually a downlink, return true when sent is a success and expect a ack
+        uint8_t     port,               // LoRaWan port
+        uint8_t *   data,               // Data / payload to be transmitted
+        uint8_t     sz,                 // Size of the data, when 0 Join only is proceeded
+        uint8_t *   rxBuffer,           // Downlink buffer, make sure it will be large enought, no verification
+        uint8_t *   rxSize,             // uint8_t containing the rxBuffer size and returning the downlink message size
+        uint8_t *   rxPort,             // uint8_t pointer for returnin the downlink port
+        uint8_t     sf = 9,             // Spread Factor , use DSKLORAE5_SF_UNCHANGED to keep the previous one
+        uint8_t     pwr = 14,           // Transmission power, use DSKLORAE5_DW_UNCHANGED to keep the previous one
+        uint8_t     retries = 0         // Number of retry, use DSKLORAE5_RT_UNCHANGED to keep the previous one. retry = 0 means 1 uplink, no retry
+    );
 
-### offset_and_rotate
+    bool send_sync(    // send a message on LoRaWan, return true when sent is a success 
+        uint8_t     port,               // LoRaWan port
+        uint8_t *   data,               // Data / payload to be transmitted
+        uint8_t     sz,                 // Size of the data, when 0 Join only is proceeded
+        bool        acked = false,      // Ack / Downlink request
+        uint8_t     sf = 9,             // Spread Factor , use DSKLORAE5_SF_UNCHANGED to keep the previous one
+        uint8_t     pwr = 14,           // Transmission power, use DSKLORAE5_DW_UNCHANGED to keep the previous one
+        uint8_t     retries = 0         // Number of retry, use DSKLORAE5_RT_UNCHANGED to keep the previous one. retry = 0 means 1 uplink, no retry
+    );
 
-This example shows how to set offset and rotate. Note that `setDisplayOffset()` works after call `display()` and `setDisplayOrientation` works after call `writeXXX()`.
+    bool join_sync(    // Join only (join is automatically executed on send but you can decide to join sepratly)
+        uint8_t     sf = 9,             // Spread Factor , use DSKLORAE5_SF_UNCHANGED to keep the previous one
+        uint8_t     pwr = 14            // Transmission power, use DSKLORAE5_DW_UNCHANGED to keep the previous one
+    );
 
-### others
+    bool isJoined();                    // return true when the device has joined the network
+    bool isAcked();                     // return true when the previous uplink has been confirmed as received
+    bool isDownlinkPending();           // return true when the previous uplink got a downlink pending response
+    bool isDownlinkReceived();          // return true when the previous uplink got a downlink response
+    int16_t getRssi();                  // return last Ack RSSI when the previous uplink has been confirmed as received or DSKLORAE5_INVALID_RSSI
+    int16_t getSnr();                   // return last Ack SNR when the previous uplink has been confirmed as received or DSKLORAE5_INVALID_SNR
 
-You can use `setBrightness()` to change the brightness of LED. Note that the brighter you set, the larger current will be needed.
+```
 
-
-When set `setBlinkRate(BLINK_1HZ)` or `setBlinkRate(BLINK_2HZ)`, LED will blink automatically.
-
-More informations in `Grove_LED_Matrix_Driver_HT16K33.h`
-
-## Change I2C Address
-
-There are 8 possible I2C address of this grove, from 0x70 to 0x77. You can change the I2C address by soliding those pads in a red box in the following picture. For example, if I want to change the address to 0x73, I need to connect pad A1,A0 and disconnect pad A2. Then I will get address 0b01110011, that is 0x73.
-
-![](https://user-images.githubusercontent.com/18615354/42156790-9c8733ea-7e1e-11e8-9de4-4b6292940a52.png)
-
-----
-
-This software is written by Jerry Yip for seeed studio and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt for more information.<br>
-
-Contributing to this software is warmly welcomed. You can do this basically by<br>
-[forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
-for operating guide). Adding change log and your contact into file header is encouraged.<br>
-Thanks for your contribution.
-
-Seeed Studio is an open hardware facilitation company based in Shenzhen, China. <br>
-Benefiting from local manufacture power and convenient global logistic system, <br>
-we integrate resources to serve new era of innovation. Seeed also works with <br>
-global distributors and partners to push open hardware movement.<br>
-
-
-[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/grove-led-matrix-driver-ht16k33)](https://github.com/igrigorik/ga-beacon)
-
-
-
-## Change log
-2025-1-20: Introduced software IIC to support multi-bus control devices, and introduced the I2Cdev_interface layer to provide a unified interface for hardware IIC and software IIC to the application layer; Added dual-bus demo;
+## Changelog
+### 2022-06-19 version 1.0.0
+Initial version.
