@@ -29,9 +29,6 @@ jobs:
           # eg: echo "<repo>" >> depend.list
           echo "ackPeng/espsoftwareserial" >> depend.list
 
-    
-
-
 
       - name: Create a ignore.list file
         run: |
