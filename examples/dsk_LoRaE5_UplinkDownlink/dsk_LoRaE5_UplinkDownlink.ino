@@ -17,7 +17,11 @@ void setup() {
   uint32_t start = millis();
   while ( !Serial && (millis() - start) < 1500 );  // Open the Serial Monitor to get started or wait for 1.5"
   
+#if defined(SEEED_WIO_TERMINAL)
   if ( ! lorae5.begin(DSKLORAE5_SEARCH_WIO) ) {
+#else
+  if ( ! lorae5.begin(DSKLORAE5_HWSERIAL1) ) {
+#endif
     Serial.println("LoRa E5 Init Failed");
     while(1); 
   }
