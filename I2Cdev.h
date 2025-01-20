@@ -45,7 +45,7 @@
 #define _I2CDEV_H_
 
 
-#include "I2Cdev_core.h"
+#include "I2Cdev_interface.h"
 
 
 // -----------------------------------------------------------------------------

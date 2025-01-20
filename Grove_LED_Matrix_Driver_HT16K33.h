@@ -34,7 +34,7 @@
 #define __GROVE_LED_MATRIX_DRIVER_HT16K33__
 
 #include "I2Cdev.h"
-#include "I2Cdev_core.h"
+#include "I2Cdev_interface.h"
 
 
 #define HT16K33_DEFAULT_I2C_ADDR    0x70
