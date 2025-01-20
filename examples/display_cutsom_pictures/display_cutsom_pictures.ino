@@ -22,7 +22,7 @@ const uint64_t EXAMPLE[12] = {
     0x00080cfefffe0c08
 };
 
-HardwareIICAdapter hard_ware_iic;
+Default_IIC_Adapter hard_ware_iic;
 Matrix_8x8 matrix;
 
 void setup() {
