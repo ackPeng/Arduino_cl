@@ -20,7 +20,7 @@ void setup() {
 #if defined(SEEED_WIO_TERMINAL)
   if ( ! lorae5.begin(DSKLORAE5_SEARCH_WIO) ) {
 #else
-  if ( ! lorae5.begin(DSKLORAE5_HWSERIAL1) ) {
+  if ( ! lorae5.begin(0x01) ) {
 #endif
     Serial.println("LoRa E5 Init Failed");
     while(1); 
